@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Minecraft Server - Join Us</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #2c1810;
+      color: #e0c9b1;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #1a0f0a;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      margin: 0 20px;
+    }
+
+    nav a {
+      color: #e0c9b1;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    .active {
+      color: #ffd700;
+      border-bottom: 2px solid #ffd700;
+    }
+
+    /* Main Content */
+    .main-content {
+      background-color: #3d241a;
+      padding: 2rem;
+      border-radius: 10px;
+      margin-top: 2rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    h1, h2 {
+      color: #ffd700;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Join Section Styles */
+    .join-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .join-steps {
+      margin: 2rem 0;
+      padding: 2rem;
+      background-color: #2c1810;
+      border-radius: 8px;
+    }
+
+    .step {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      border-left: 3px solid #ffd700;
+      text-align: left;
+      background-color: #3d241a;
+    }
+
+    .step-number {
+      color: #ffd700;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .join-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 400px;
+      margin: 2rem auto;
+    }
+
+    .join-button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .join-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .form-button {
+      background-color: #ffd700;
+      color: #2c1810;
+    }
+
+    .discord-button {
+      background-color: #5865F2;
+      color: white;
+    }
+
+    .note {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #2c1810;
+      border-radius: 8px;
+      font-style: italic;
+    }
+  </style>
+  <style>
+    .footer {
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      font-family: 'MedievalSharp', cursive;
+      color: #8b4513;
+      position: relative;
+      margin-top: 40px;
+    }
+
+    .footer::before {
+      content: "✦";
+      display: block;
+      text-align: center;
+      color: #8b4513;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .footer-content {
+      border-top: 2px solid #8b4513;
+      padding-top: 15px;
+      font-size: 0.9em;
+    }
+
+    .footer-text {
+      margin: 5px 0;
+    }
+
+    .footer-year {
+      font-size: 0.8em;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <ul>
+    <li><a href="./index.html">Home</a></li>
+    <li><a href="./about.html">About Us</a></li>
+    <li><a href="./features.html">Features</a></li>
+    <li><a href="./houses.html">Houses</a></li>
+    <li><a href="./guide.html">Guide</a></li>
+    <li><a href="./join.html">Join Us</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <section class="main-content">
+    <div class="join-container">
+      <h2>Join Our Community</h2>
+
+      <div class="join-steps">
+        <div class="step">
+          <div class="step-number">Step 1</div>
+          <p>Join our Discord server to Connect with our Community and stay Updated with the latest News and Announcements.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">Step 2</div>
+          <p>Fill out our Application Form. This helps us maintain a Friendly and Trustworthy Community.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">Step 3</div>
+          <p>Wait for our staff to Review your Application. You will know when we have Accepted/Denied you!</p>
+        </div>
+      </div>
+
+      <div class="join-buttons">
+        <a href="https://discord.gg/DWhHQPeKWN" class="join-button discord-button" target="_blank">Join Our Discord</a>
+        <a href="" class="join-button form-button" target="_blank">Fill Application Form</a>
+      </div>
+
+      <div class="note">
+        <p>Please make sure to join our Discord server before filling out the application form. This helps us verify your identity and communicate with you more effectively.</p>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-text">Created by the Lord_Caelus</div>
+      <div class="footer-year">© 2025 Caelus' Server. All rights reserved.</div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
