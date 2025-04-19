@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Minecraft Server - About Us</title>
+  <title>Helianthus - About Us</title>
   <style>
     body {
       margin: 0;
@@ -12,23 +12,19 @@
       color: #e0c9b1;
       font-family: 'Times New Roman', Times, serif;
     }
-
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 20px;
     }
-
-    /* Navigation */
     nav {
       background-color: #1a0f0a;
       padding: 1rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
-
     nav ul {
       list-style: none;
       display: flex;
@@ -36,68 +32,78 @@
       margin: 0;
       padding: 0;
     }
-
     nav li {
       margin: 0 20px;
     }
-
     nav a {
       color: #e0c9b1;
       text-decoration: none;
       font-size: 1.2rem;
       transition: color 0.3s;
     }
-
     nav a:hover {
       color: #ffd700;
     }
-    /* Main Content */
     .main-content {
       background-color: #3d241a;
-      padding: 2rem;
+      padding: 2.5rem;
       border-radius: 10px;
       margin-top: 2rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      animation: fadeSlideIn 1s ease-out both;
     }
-
+    @keyframes fadeSlideIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
     h1, h2 {
       color: #ffd700;
       text-align: center;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 4px #000;
     }
-
-    /* Tables */
+    p {
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
     table {
       width: 100%;
       border-collapse: collapse;
-      margin: 1rem 0;
-      background-color: #2c1810;
-      border-radius: 5px;
+      margin: 2rem 0;
+      background-color: rgba(0,0,0,0.2);
+      border-radius: 10px;
       overflow: hidden;
+      animation: fadeUp 1s ease forwards;
+      transform: translateY(20px);
+      opacity: 0;
     }
-
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
     th, td {
-      padding: 12px 15px;
+      padding: 15px;
       text-align: left;
       border: 1px solid #4a2f20;
     }
-
     th {
       background-color: #1a0f0a;
       color: #ffd700;
     }
-  </style>
-  <style>
+    td {
+      background-color: #2c1810;
+    }
     .footer {
       width: 100%;
       padding: 20px 0;
       text-align: center;
-      font-family: 'MedievalSharp', cursive;
+      font-family: 'Times New Roman', Times, serif;
       color: #8b4513;
       position: relative;
       margin-top: 40px;
     }
-
     .footer::before {
       content: "✦";
       display: block;
@@ -106,20 +112,25 @@
       font-size: 24px;
       margin-bottom: 10px;
     }
-
     .footer-content {
       border-top: 2px solid #8b4513;
       padding-top: 15px;
       font-size: 0.9em;
     }
-
     .footer-text {
       margin: 5px 0;
     }
-
     .footer-year {
       font-size: 0.8em;
       opacity: 0.8;
+    }
+    @media (max-width: 768px) {
+      nav li {
+        margin: 0 10px;
+      }
+      nav a {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -135,18 +146,22 @@
     <li><a href="./join.html">Join Us</a></li>
   </ul>
 </nav>
-
 <div class="container">
   <section class="main-content">
     <h2>About Our Community</h2>
-    <p>We are a small group of Minecraft enthusiasts, working to create an amazing Server experience. While we balance server development with our daily lives, we're committed to providing regular updates and maintaining a friendly community here.</p>
+    <p>We're a small but dedicated group of Minecraft nerds who wanted something more.. more lore, more immersion, more structure. We work on this server between our studies and jobs, so things might go slow sometimes, but every detail has love behind it.</p>
+    <p>We believe in fair play, weird roleplay, and creating something actually unique. Whether you're a builder, hardcore min-maxer, or someone who just likes watching the world burn, we probably have a House for you.</p>
+
     <table>
+      <thead>
       <tr>
         <th>Staff Member</th>
         <th>Role</th>
         <th>Discord</th>
         <th>Time Zone</th>
       </tr>
+      </thead>
+      <tbody>
       <tr>
         <td>Caelus</td>
         <td>Owner</td>
@@ -165,20 +180,16 @@
         <td>shelby6288</td>
         <td>NA</td>
       </tr>
+      <tr>
         <td>xFire12</td>
         <td>Admin</td>
         <td>xfore12</td>
         <td>NA</td>
-      <tr>
       </tr>
-      <tr>
-      </tr>
-      <tr>
-      </tr>
-      <tr>
-      </tr>
+      </tbody>
     </table>
-    <p>[If you have any questions or complaints. You are welcome to contact us on discord.]</p>
+
+    <p>If you have any questions or complaints, contact us on Discord. We’re usually friendly.</p>
   </section>
   <footer class="footer">
     <div class="footer-content">

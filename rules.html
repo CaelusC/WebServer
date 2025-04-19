@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Helianthus - Rules</title>
+    <title>Helianthus - Server Rules</title>
     <style>
         body {
             margin: 0;
@@ -53,85 +53,79 @@
 
         .main-content {
             background-color: #3d241a;
-            padding: 2rem;
-            border-radius: 70px;
+            padding: 2.5rem;
+            border-radius: 10px;
             margin-top: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            animation: fadeSlideIn 1s ease-out both;
+        }
+
+        @keyframes fadeSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         h1 {
             color: #ffd700;
             text-align: center;
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 4px #000;
         }
 
-        .house-section {
-            margin-bottom: 10px;
-            padding: 25px;
-            border-radius: 25px;
-            position: relative;
-            transition: transform 0.3s ease;
+        .rule-section {
+            margin-bottom: 2rem;
+            padding: 20px;
+            border-left: 5px solid #ffd700;
+            background: rgba(0,0,0,0.2);
+            border-radius: 8px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 1s ease forwards;
+            animation-delay: calc(var(--i, 0) * 0.2s);
         }
 
-        /* House-specific styles */
-        .house-adamant {
-            background: linear-gradient(to right, #3d0606, #3d241a);
-            border-left: 4px solid #c21d00;
+        .rule-section:nth-child(2) { --i: 1; }
+        .rule-section:nth-child(3) { --i: 2; }
+        .rule-section:nth-child(4) { --i: 3; }
+        .rule-section:nth-child(5) { --i: 4; }
+        .rule-section:nth-child(6) { --i: 5; }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .house-title {
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid;
+        .rule-section h2 {
+            color: #ffd700;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
         }
 
-        .house-adamant .house-title {
-            color: #b40000;
-        }
-        .house-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 20px;
-            align-items: start;
-        }
-        .house-content2 {
-            display: grid;
-            grid-template-columns: auto;
-            gap: 20px;
-            align-items: center;
-        }
-        .house-image:hover img {
-            transform: scale(1.05);
-        }
-
-        .house-info {
-            padding: 10px;
-        }
-
-        .specialties {
-            margin-top: 15px;
-            padding: 15px;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
-        }
-
-        .specialties ul {
+        .rule-section ul {
             list-style: none;
             padding-left: 0;
         }
 
-        .specialties li {
-            margin-bottom: 10px;
-            padding-left: 20px;
+        .rule-section li {
             position: relative;
+            padding-left: 25px;
+            margin-bottom: 1rem;
         }
 
-        .specialties li::before {
-            content: "►";
+        .rule-section li::before {
+            content: "\26A0";
             position: absolute;
             left: 0;
-            color: #8f0000;
+            color: #ffd700;
         }
 
         .footer {
@@ -159,10 +153,6 @@
         }
 
         @media (max-width: 768px) {
-            .house-content {
-                grid-template-columns: 1fr;
-            }
-
             nav li {
                 margin: 0 10px;
             }
@@ -171,126 +161,70 @@
                 font-size: 1rem;
             }
         }
-        .text-center {
-          text-align: center;
-        }
     </style>
 </head>
 <body>
 <nav>
-  <ul>
-    <li><a href="./index.html">Home</a></li>
-    <li><a href="./about.html">About Us</a></li>
-    <li><a href="./rules.html">Server Rules</a></li>
-    <li><a href="./features.html">Features</a></li>
-    <li><a href="./houses.html">Houses</a></li>
-    <li><a href="./guide.html">Guide</a></li>
-    <li><a href="./join.html">Join Us</a></li>
-  </ul>
+    <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./rules.html">Server Rules</a></li>
+        <li><a href="./features.html">Features</a></li>
+        <li><a href="./houses.html">Houses</a></li>
+        <li><a href="./guide.html">Guide</a></li>
+        <li><a href="./join.html">Join Us</a></li>
+    </ul>
 </nav>
 
 <div class="container">
     <div class="main-content">
-        <h1>Rules of The Realm</h1>
-      <p class="text-center">You have to follow these rules when you are on the Helianthus Minecraft Server. Failing to follow these rules can lead to Punishment or even a Permanent Ban</p>
-        <div class="house-section house-adamant">
-            <h2 class="house-title">General Rules</h2>
-            <div class="house-content">
-                <div class="house-info">
-                  <span class="acronym">
-                    <div class="specialties">
-                        <h3>No griefing</h3>
-                        <ul>
-                            <li>Do not destroy or steal other players' stuff.</li>
-                        </ul>
-                    </div>
-                </div>
-                    <div class="house-info">
-                      <span class="acronym">
-                        <div class="specialties">
-                            <h3>Respect others</h3>
-                            <ul>
-                                <li>No harassment, racism, or general toxicity.</li>
-                            </ul>
-                        </div>
-                    </div>
-            </div>
-            <div class="house-content">
-                <div class="house-info">
-                  <span class="acronym">
-                    <div class="specialties">
-                        <h3>No hacking/exploiting</h3>
-                        <ul>
-                            <li>Includes duping valuables, x-ray, or anything that breaks game balance.</li>
-                        </ul>
-                    </div>
-                </div>
-                    <div class="house-info">
-                      <span class="acronym">
-                        <div class="specialties">
-                            <h3>No killing players</h3>
-                            <ul>
-                                <li>Unless you are hired(House Theurgy) or agreed upon or during RP/war events.</li>
-                            </ul>
-                        </div>
-                    </div>
-            </div>
-            <div class="house-content">
-                <div class="house-info">
-                  <span class="acronym">
-                    <div class="specialties">
-                        <h3>Keep builds reasonable</h3>
-                        <ul>
-                            <li>Do not spam giant cobblestone cubes everywhere. Aesthetic matters.</li>
-                        </ul>
-                    </div>
-                </div>
-                    <div class="house-info">
-                      <span class="acronym">
-                        <div class="specialties">
-                            <h3>Ask before using anything from another House or player</h3>
-                            <ul>
-                                <li>Even if it's "public", use basic respect.</li>
-                            </ul>
-                        </div>
-                    </div>
-            </div>
-            <div class="house-content">
-                <div class="house-info">
-                  <span class="acronym">
-                    <div class="specialties">
-                        <h3>Follow the House Monopoly rules</h3>
-                        <ul>
-                            <li>This world has structure. Do not break it. You can find the monopoly information in the 'House' page</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="house-info">
-                    <span class="acronym">
-                      <div class="specialties">
-                          <h3>Settle at the Center</h3>
-                          <ul>
-                              <li>You are obligated to live near the Spawn (roughly 500 blocks). And near your House, this server is built on community and working together. Not playing solo (go play singleplayer if you disagree).</li>
-                          </ul>
-                      </div>
-                  </div>
-            </div>
+        <h1>⚖️ Rules of the Helianthus Realm ⚖️</h1>
+
+        <div class="rule-section">
+            <h2>General Conduct</h2>
+            <ul>
+                <li>No griefing or stealing. Respect others' property and effort.</li>
+                <li>Zero tolerance for harassment, racism, or toxicity.</li>
+                <li>No hacks, cheats, or exploits... including X-ray or duping.</li>
+                <li>Killing other players is only allowed by agreement, war, or RP event.</li>
+                <li>Do not use House or shared resources without permission.</li>
+            </ul>
         </div>
-        <div class="house-section house-adamant">
-            <h2 class="house-title">Extra Information</h2>
-            <div class="house-content2">
-                <div class="house-info">
-                        <div class="specialties">
-                        <h3>Trades & bartering are encouraged between Houses, this server is about collaboration and specialization, not everyone doing everything.</h3>
-                        <br><br>
-                        <h3>Houses are free to negotiate contracts (e.g. Demeter buys protection services from Theurgy for a dangerous food expedition).</h3>
-                        <br><br>
-                        <h3>Breaking hard monopoly rules without agreement is a big deal. It is like smuggling. Don't do it unless you're ready for consequences (in-game politics, admin action, or RP war).</h3>
-                        <br><br>
-                        <h3>Houses can have alliances, rivalries, and even conflicts, but everything should be grounded in good fun and respect.</h3>
-                    </div>
-                </div>
-            </div>
+
+        <div class="rule-section">
+            <h2>Building Rules</h2>
+            <ul>
+                <li>Keep builds immersive. No floating messes or random spam structures.</li>
+                <li>You must build within 500 blocks of Spawn and near your House HQ.</li>
+                <li>Coordinate large projects with your House leaders to avoid conflict.</li>
+            </ul>
+        </div>
+
+        <div class="rule-section">
+            <h2>Monopoly System</h2>
+            <ul>
+                <li>Hard Monopoly - exclusive rights. Only the owning House may operate.</li>
+                <li>Soft Monopoly - others may participate, but must rely on the owner House as the main provider.</li>
+                <li>Breaking monopoly - smuggling. There will be RP or administrative consequences.</li>
+            </ul>
+        </div>
+
+        <div class="rule-section">
+            <h2>Roleplay & Community</h2>
+            <ul>
+                <li>Maintain in-character behavior where appropriate.</li>
+                <li>Conflict is allowed in RP, but real toxicity is not.</li>
+                <li>Trade, politics, and alliances are encouraged, keep it fun and fair.</li>
+            </ul>
+        </div>
+
+        <div class="rule-section">
+            <h2>Final Notes</h2>
+            <ul>
+                <li>Unsure about something? Ask an admin or House leader.</li>
+                <li>Rules may evolve — stay updated through server announcements.</li>
+                <li>This world is shared. Respect the story we're building together.</li>
+            </ul>
         </div>
     </div>
 

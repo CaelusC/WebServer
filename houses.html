@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Lost Order - Houses</title>
+    <title>Helianthus - Houses</title>
     <style>
         body {
             margin: 0;
@@ -12,13 +12,11 @@
             color: #e0c9b1;
             font-family: 'Times New Roman', Times, serif;
         }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
-
         nav {
             background-color: #1a0f0a;
             padding: 1rem;
@@ -27,7 +25,6 @@
             z-index: 1000;
             box-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
-
         nav ul {
             list-style: none;
             display: flex;
@@ -35,139 +32,135 @@
             margin: 0;
             padding: 0;
         }
-
         nav li {
             margin: 0 20px;
         }
-
         nav a {
             color: #e0c9b1;
             text-decoration: none;
             font-size: 1.2rem;
             transition: color 0.3s;
         }
-
         nav a:hover {
             color: #ffd700;
         }
-
         .main-content {
             background-color: #3d241a;
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 10px;
             margin-top: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            animation: fadeSlideIn 1s ease-out both;
         }
-
+        @keyframes fadeSlideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
         h1 {
             color: #ffd700;
             text-align: center;
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 4px #000;
         }
-
+        .text-center {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
         .house-section {
             margin-bottom: 30px;
             padding: 25px;
             border-radius: 10px;
-            position: relative;
-            transition: transform 0.3s ease;
+            background: rgba(0,0,0,0.2);
+            animation: fadeUp 1s ease forwards;
+            opacity: 0;
+            transform: translateY(30px);
         }
-
         .house-section:hover {
-            transform: translateY(-5px);
+            transform: translateY(20px);
         }
-
-        /* House-specific styles */
+        @keyframes fadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
         .house-adamant {
-            background: linear-gradient(to right, #2c3247, #3d241a);
             border-left: 4px solid #808080;
+            background: linear-gradient(to right, #2c3247, #3d241a);
         }
-
         .house-theurgy {
-            background: linear-gradient(to right, #2b2433, #3d241a);
             border-left: 4px solid #663399;
+            background: linear-gradient(to right, #2b2433, #3d241a);
         }
-
         .house-demeter {
-            background: linear-gradient(to right, #233323, #3d241a);
             border-left: 4px solid #2e5931;
+            background: linear-gradient(to right, #233323, #3d241a);
         }
-        .house-monopoly {
-            background: linear-gradient(to right, #3b3939, #3d241a);
-            border-left: 2px solid #e2e2e2;
-        }
-
         .house-title {
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 2px solid;
+            border-bottom: 2px solid #ffd700;
+            color: #ffd700;
         }
-
-        .house-adamant .house-title {
-            color: #5d719e;
-        }
-
-        .house-theurgy .house-title {
-            color: #b19cd9;
-        }
-
-        .house-demeter .house-title {
-            color: #a1952a;
-        }
-
         .house-content {
             display: grid;
             grid-template-columns: 1fr 2fr;
             gap: 20px;
             align-items: start;
         }
-
         .house-image {
             width: 100%;
             border-radius: 10px;
-            overflow: hidden;
+            overflow: visible;
+            position: relative;
+            z-index: 1;
         }
-
         .house-image img {
             width: 100%;
             height: auto;
-            transition: transform 0.3s ease;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
+        .house-image:hover {
+            z-index: 10;
+        }
         .house-image:hover img {
             transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.5);
         }
-
         .house-info {
             padding: 10px;
         }
-
         .specialties {
             margin-top: 15px;
             padding: 15px;
             background: rgba(0, 0, 0, 0.2);
             border-radius: 5px;
         }
-
         .specialties ul {
             list-style: none;
             padding-left: 0;
         }
-
         .specialties li {
             margin-bottom: 10px;
             padding-left: 20px;
             position: relative;
         }
-
         .specialties li::before {
-            content: "►";
+            content: "\25BA";
             position: absolute;
             left: 0;
             color: #ffd700;
         }
-
+        .constitution-download {
+            display: inline-block;
+            margin-top: 10px;
+            color: #ffd700;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .constitution-download:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
         .footer {
             width: 100%;
             padding: 20px 0;
@@ -176,102 +169,72 @@
             position: relative;
             margin-top: 40px;
         }
-
         .footer::before {
-            content: "✦";
+            content: "\2726";
             display: block;
             text-align: center;
             color: #8b4513;
             font-size: 24px;
             margin-bottom: 10px;
         }
-
         .footer-content {
             border-top: 2px solid #8b4513;
             padding-top: 15px;
             font-size: 0.9em;
         }
-
         @media (max-width: 768px) {
             .house-content {
                 grid-template-columns: 1fr;
             }
-
             nav li {
                 margin: 0 10px;
             }
-
             nav a {
                 font-size: 1rem;
             }
-        }
-        .text-center {
-          text-align: center;
         }
     </style>
 </head>
 <body>
 <nav>
-  <ul>
-    <li><a href="./index.html">Home</a></li>
-    <li><a href="./about.html">About Us</a></li>
-    <li><a href="./rules.html">Server Rules</a></li>
-    <li><a href="./features.html">Features</a></li>
-    <li><a href="./houses.html">Houses</a></li>
-    <li><a href="./guide.html">Guide</a></li>
-    <li><a href="./join.html">Join Us</a></li>
-  </ul>
+    <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./rules.html">Server Rules</a></li>
+        <li><a href="./features.html">Features</a></li>
+        <li><a href="./houses.html">Houses</a></li>
+        <li><a href="./guide.html">Guide</a></li>
+        <li><a href="./join.html">Join Us</a></li>
+    </ul>
 </nav>
 
 <div class="container">
     <div class="main-content">
         <h1>Houses of the Realm</h1>
-      <p class="text-center">Across the Oceans, some sailors found a new continent nobody knew existed. The place is filled with Ancient Ruins and new resources. Once the news spread, three Major Powers immediately started sending ships packed with settlers, each wanting their own piece of this new world. Now these colonies are racing to establish themselves, grab territory, and uncover whatever mysteries this land has been hiding all these years.</p>
-  <div class="">
-        <div class="house-section house-monopoly">
-            <h2 class="house-title">🏛️ House Monopoly System 🏛️</h2>
-            <div class="house-content">
-                <div class="house-info">
-                  <span class="house-title-text"><strong>Hard Monopoly</strong> - Exclusive to this House Only!<br><br>
-                    <strong>Soft Monopoly</strong> - You should rely on this House for these, but you are allowed to do it yourself too.</span>
-                  <br><br>
-                  <span class="acronym"></span>
-                </div>
-            </div>
-        </div>
+        <p class="text-center">Three major factions shape this new world. Learn their ways, join their cause, and read their constitutions.</p>
+
         <div class="house-section house-adamant">
             <h2 class="house-title">House of Adamant</h2>
             <div class="house-content">
                 <div class="house-image">
-                    <img src="img/Miner%20house.png" alt="House of Adamant">
+                    <img src="img/Miner house.png" alt="House of Adamant">
                 </div>
                 <div class="house-info">
-                  <span class="house-title-text">Skilled Miners sent by STONE.corp</span>
-                  <br><br>
-                  <span class="acronym">
-            <strong>S</strong>ystematic<br>
-            <strong>T</strong>akeover &<br>
-            <strong>O</strong>ptimization of<br>
-            <strong>N</strong>atural<br>
-            <strong>E</strong>xtractives
-        </span>
-                  <br><br>
-                  They are here to do one thing and one thing only. Gather all this new world's resources and gain as much profit for STONE.corp as possible.
-                  <br><br>
-                  Ruled by one Leader and his three subordinates. This House operates completely like a corporation.
+                    <p><strong>S</strong>ystematic <strong>T</strong>akeover & <strong>O</strong>ptimization of <strong>N</strong>atural <strong>E</strong>xtractives</p>
+                    <p>STONE.corp's industrial colonists. Ruthless, structured, and all about profit. One Leader. Three subordinates. Maximum efficiency.</p>
                     <div class="specialties">
                         <h3>Hard Monopolies:</h3>
                         <ul>
-                            <li>All Create Mod machinery and contraptions</li>
-                            <li>All heavy transportation systems (Trains, minecart systems, large-scale logistics)</li>
+                            <li>Create mod machines</li>
+                            <li>Rail systems and automation</li>
                         </ul>
                         <h3>Soft Monopolies:</h3>
                         <ul>
-                            <li>Mining and cave exploration</li>
-                            <li>General digging and quarrying</li>
-                            <li>Simple transportation (air balloons)</li>
+                            <li>Mining and excavation</li>
+                            <li>Transportation</li>
                         </ul>
                     </div>
+                    <a class="constitution-download" href="Adamant_Constitution.pdf" target="_blank">📄 Read Constitution</a>
                 </div>
             </div>
         </div>
@@ -283,24 +246,20 @@
                     <img src="img/wizard.png" alt="House of Theurgy">
                 </div>
                 <div class="house-info">
-                    <p>A group of skilled Witches and Wizards sent by the Covenant Academy, a school that specializes in the darkest of magics.
-                      <br><br>
-                      Their only goal is to further their research and power. Once they heard this New World had magical relics and ancient ruins to be claimed, they sent their best candidates, even if it meant death.
-                      <br><br>
-                      This house is ruled by 3 Arch Mages, each controlling a key aspect: Law, Projects, and Harmony.</p>
-                        <div class="specialties">
+                    <p>Witches and warlocks of the Covenant Academy. Research-obsessed, dangerous, and not entirely sane. They serve no gods — only curiosity.</p>
+                    <div class="specialties">
                         <h3>Hard Monopolies:</h3>
                         <ul>
-                            <li>All magic items (modded or vanilla enchantments, magical tools/artifacts)</li>
-                            <li>All hostile mob farms (skeleton, creeper, blaze farms, etc.)</li>
+                            <li>All enchanted or magical items</li>
+                            <li>Hostile mob farms</li>
                         </ul>
                         <h3>Soft Monopolies:</h3>
                         <ul>
-                            <li>All mob drops (bones, gunpowder, ender pearls, etc.)</li>
-                            <li>Exploration of the Nether, End, dangerous dungeons</li>
-                            <li>High-risk relic retrieval and mercenary work (paid escort, dungeon runs)</li>
+                            <li>Mystical resource gathering</li>
+                            <li>Dungeon raids and rituals</li>
                         </ul>
                     </div>
+                    <a class="constitution-download" href="Theurgy_Constitution.pdf" target="_blank">📄 Read Constitution</a>
                 </div>
             </div>
         </div>
@@ -312,28 +271,25 @@
                     <img src="img/farmer.png" alt="House of Demeter">
                 </div>
                 <div class="house-info">
-                    <p>A community of farmers sent by Tzar of Leria, where every decision is made through frantic group votes and never ending formalities.
-                      <br><br>
-                      They preach peace, love, and equality while looking down at everyone who isn't part of their 'Enlightened' way of life.
-                      <br><br>
-                      Once they heard about fertile lands in the New World, they saw it as a divine sign to spread their particular brand of Harmony. Outsiders might call them a Cult, but they prefer the term "Agricultural Collective." Just don't ask what happened to the last person who planted their crops in the wrong moon phase.</p>
+                    <p>Peaceful but cult-like agriculturalists. The Collective of Leria values harmony, seasonal rituals, and community. Outsiders call them a cult — they're not wrong.</p>
                     <div class="specialties">
                         <h3>Hard Monopolies:</h3>
                         <ul>
-                            <li>MCA Recruiters (villager production and population control)</li>
-                            <li>Farmer's Delight production (cooking, kitchen blocks, fancy food)</li>
+                            <li>Villager systems</li>
+                            <li>Farmer's Delight food systems</li>
                         </ul>
                         <h3>Soft Monopolies:</h3>
                         <ul>
-                            <li>All MCA village management</li>
-                            <li>Crop farming and animal husbandry</li>
+                            <li>Breeding and livestock</li>
+                            <li>Crop and herbalism</li>
                         </ul>
                     </div>
+                    <a class="constitution-download" href="Demeter_Constitution.pdf" target="_blank">📄 Read Constitution</a>
                 </div>
             </div>
         </div>
-    </div>
 
+    </div>
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-text">Created by Caelus</div>

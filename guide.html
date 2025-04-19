@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Lost Order - Guide</title>
+    <title>Helianthus - Guide</title>
     <style>
         body {
             margin: 0;
@@ -12,13 +12,11 @@
             color: #e0c9b1;
             font-family: 'Times New Roman', Times, serif;
         }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
-
         nav {
             background-color: #1a0f0a;
             padding: 1rem;
@@ -27,7 +25,6 @@
             z-index: 1000;
             box-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
-
         nav ul {
             list-style: none;
             display: flex;
@@ -35,98 +32,84 @@
             margin: 0;
             padding: 0;
         }
-
         nav li {
             margin: 0 20px;
         }
-
         nav a {
             color: #e0c9b1;
             text-decoration: none;
             font-size: 1.2rem;
             transition: color 0.3s;
         }
-
         nav a:hover {
             color: #ffd700;
         }
-
         .main-content {
             background-color: #3d241a;
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 10px;
             margin-top: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            animation: fadeSlideIn 1s ease-out both;
         }
-
+        @keyframes fadeSlideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
         h1 {
             color: #ffd700;
             text-align: center;
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 4px #000;
         }
-
         h2 {
             color: #ffd700;
-            margin-bottom: 1rem;
+            margin-top: 1.5rem;
         }
-
         .guide-section {
             margin-bottom: 30px;
-            padding: 20px;
-            background: #2c1810;
-            border-radius: 5px;
+            padding: 25px;
+            border-radius: 10px;
+            background: rgba(0,0,0,0.2);
+            animation: fadeUp 1s ease forwards;
+            opacity: 0;
+            transform: translateY(30px);
         }
-
-        .step-list {
+        @keyframes fadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .step-list, .qna-list {
             list-style: none;
-            padding-left: 20px;
+            padding-left: 0;
         }
-
-        .step-list li {
+        .step-list li, .qna-list li {
             margin-bottom: 15px;
             padding-left: 25px;
             position: relative;
         }
-
-        .step-list li::before {
+        .step-list li::before, .qna-list li::before {
             content: "►";
             position: absolute;
             left: 0;
             color: #ffd700;
         }
-
         .note-box {
             background-color: #2c1810;
             padding: 15px;
             margin: 15px 0;
             border-radius: 5px;
-            border: 1px solid #e0c9b1;
+            border: 1px solid #ffd700;
         }
-
-        .qna-list {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .qna-list li {
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: #2c1810;
-            border-radius: 5px;
-        }
-
         .question {
             color: #ffd700;
             font-weight: bold;
             margin-bottom: 10px;
         }
-
         .answer {
             padding-left: 20px;
             border-left: 3px solid #ffd700;
         }
-
         .footer {
             width: 100%;
             padding: 20px 0;
@@ -135,7 +118,6 @@
             position: relative;
             margin-top: 40px;
         }
-
         .footer::before {
             content: "✦";
             display: block;
@@ -144,41 +126,36 @@
             font-size: 24px;
             margin-bottom: 10px;
         }
-
         .footer-content {
             border-top: 2px solid #8b4513;
             padding-top: 15px;
             font-size: 0.9em;
         }
-
         @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-            }
-
             nav li {
                 margin: 0 10px;
             }
-
             nav a {
                 font-size: 1rem;
+            }
+            .main-content {
+                padding: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
 <nav>
-  <ul>
-    <li><a href="./index.html">Home</a></li>
-    <li><a href="./about.html">About Us</a></li>
-    <li><a href="./rules.html">Server Rules</a></li>
-    <li><a href="./features.html">Features</a></li>
-    <li><a href="./houses.html">Houses</a></li>
-    <li><a href="./guide.html">Guide</a></li>
-    <li><a href="./join.html">Join Us</a></li>
-  </ul>
+    <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./rules.html">Server Rules</a></li>
+        <li><a href="./features.html">Features</a></li>
+        <li><a href="./houses.html">Houses</a></li>
+        <li><a href="./guide.html">Guide</a></li>
+        <li><a href="./join.html">Join Us</a></li>
+    </ul>
 </nav>
-
 <div class="container">
     <div class="main-content">
         <h1>Guide to the Realm</h1>
@@ -186,34 +163,33 @@
         <div class="guide-section">
             <h2>Installing the Modpack</h2>
             <div class="note-box">
-                Required: Modrinth App, and Our Official Modpack
+                Required: Modrinth App and our Official Modpack
             </div>
             <ul class="step-list">
-              <a href="">This link doesn't Work rn</a>
-              <br><br>
-              <li>Download our Official Modpack: from the link above ^</li>
-                <li>Download Modrinth Launcher from their official website</li>
+                <li><a href="#">[ Modpack Link Placeholder - Will be updated ]</a></li>
+                <li>Download our Official Modpack from the link above</li>
+                <li>Install Modrinth Launcher from their official website</li>
                 <li>Click on "Install Profile" or "Add Instance"</li>
-                <li>Find our Modpack: "The Lost Order Modpack"</li>
-                <li>Click Install and wait for the download to complete</li>
-                <li>Once installed, click Play and enter our server IP</li>
+                <li>Search for "The Lost Order Modpack"</li>
+                <li>Click Install and wait for the download to finish</li>
+                <li>Once done, hit Play and enter our server IP</li>
             </ul>
             <div class="note-box">
-                Having trouble with installing? Join our Discord for support! We will be happy to help you with any questions you may have.
+                Having trouble? Join our Discord! We’ll help you out.
             </div>
         </div>
 
         <div class="guide-section">
             <h2>Living as Your House</h2>
             <ul class="step-list">
-                <li>Choose your House wisely - Each has unique strengths and specialities.</li>
-                <li>Find your House's Territory and meet your Fellow Members.</li>
-                <li>Check your Quest Book for your House's progression path. Stick To It!!</li>
-                <li>Learn about your House's Lore and Monopolies.</li>
-                <li>Start contributing to your House's economy and expansion. Claim as much territory as you can.</li>
+                <li>Pick your House carefully — they’re all unique.</li>
+                <li>Find your territory and meet your Housemates.</li>
+                <li>Use your Quest Book to follow your House’s path.</li>
+                <li>Learn the lore and the monopolies your House owns.</li>
+                <li>Support your House economy and claim territory.</li>
             </ul>
             <div class="note-box">
-                Remember: Your House is your family. Work together, grow together!
+                Your House is your family — help them thrive!
             </div>
         </div>
 
@@ -222,28 +198,27 @@
             <ul class="qna-list">
                 <li>
                     <div class="question">How do I find my House's territory?</div>
-                    <div class="answer">Each House has a designated starting area with NPCs. Check your quest book for coordinates and guidance.</div>
+                    <div class="answer">Check your quest book for the coordinates. Each House starts with NPCs and clear direction.</div>
                 </li>
                 <li>
                     <div class="question">Can I switch Houses?</div>
-                    <div class="answer">Houses are permanent choices for each season. Choose wisely!</div>
+                    <div class="answer">Not mid-season. Pick carefully — it's a permanent choice for now.</div>
                 </li>
                 <li>
                     <div class="question">How do I trade with other Houses?</div>
-                    <div class="answer">Use the central marketplace or arrange direct trades through our Discord.</div>
+                    <div class="answer">Use the central marketplace or arrange trades on Discord.</div>
                 </li>
                 <li>
                     <div class="question">What happens if I die?</div>
-                    <div class="answer">Death is pretty harsh! You might lose items, xp or need help from your House members. Be sure to ask!</div>
+                    <div class="answer">You might lose XP or items. Ask your House for help — death is serious.</div>
                 </li>
                 <li>
                     <div class="question">When does the season end?</div>
-                    <div class="answer">Seasons typically last 2 months. Check Discord announcements for exact dates.</div>
+                    <div class="answer">Every 2 months. Dates are announced in Discord.</div>
                 </li>
             </ul>
         </div>
     </div>
-
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-text">Created by Caelus</div>

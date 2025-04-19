@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Minecraft Server - Features</title>
+  <title>Helianthus - Features</title>
   <style>
     body {
       margin: 0;
@@ -12,23 +12,19 @@
       color: #e0c9b1;
       font-family: 'Times New Roman', Times, serif;
     }
-
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 20px;
     }
-
-    /* Navigation */
     nav {
       background-color: #1a0f0a;
       padding: 1rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
-
     nav ul {
       list-style: none;
       display: flex;
@@ -36,67 +32,76 @@
       margin: 0;
       padding: 0;
     }
-
     nav li {
       margin: 0 20px;
     }
-
     nav a {
       color: #e0c9b1;
       text-decoration: none;
       font-size: 1.2rem;
       transition: color 0.3s;
     }
-
     nav a:hover {
       color: #ffd700;
     }
-    /* Main Content */
     .main-content {
       background-color: #3d241a;
-      padding: 2rem;
+      padding: 2.5rem;
       border-radius: 10px;
       margin-top: 2rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      animation: fadeSlideIn 1s ease-out both;
     }
-
-    h1, h2, h3 {
+    @keyframes fadeSlideIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h2 {
       color: #ffd700;
       text-align: center;
-      margin-bottom: 1.5rem;
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 4px #000;
     }
-
-    /* Features Grid */
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
-      margin: 2rem 0;
+      margin-bottom: 2rem;
     }
-
     .feature-card {
-      background-color: #2c1810;
+      background-color: rgba(0,0,0,0.2);
       padding: 1.5rem;
-      border-radius: 8px;
+      border-radius: 10px;
       text-align: center;
-      transition: transform 0.3s;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeUp 0.8s ease forwards;
+      transform: translateY(20px);
+      opacity: 0;
     }
-
     .feature-card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.4);
     }
-  </style>
-  <style>
+    @keyframes fadeUp {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    .feature-card h3 {
+      color: #ffd700;
+      margin-bottom: 1rem;
+    }
     .footer {
       width: 100%;
       padding: 20px 0;
       text-align: center;
-      font-family: 'MedievalSharp', cursive;
+      font-family: 'Times New Roman', Times, serif;
       color: #8b4513;
       position: relative;
       margin-top: 40px;
     }
-
     .footer::before {
       content: "✦";
       display: block;
@@ -105,20 +110,25 @@
       font-size: 24px;
       margin-bottom: 10px;
     }
-
     .footer-content {
       border-top: 2px solid #8b4513;
       padding-top: 15px;
       font-size: 0.9em;
     }
-
     .footer-text {
       margin: 5px 0;
     }
-
     .footer-year {
       font-size: 0.8em;
       opacity: 0.8;
+    }
+    @media (max-width: 768px) {
+      nav li {
+        margin: 0 10px;
+      }
+      nav a {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -134,38 +144,37 @@
     <li><a href="./join.html">Join Us</a></li>
   </ul>
 </nav>
-
 <div class="container">
   <section class="main-content">
     <h2>Server Features</h2>
     <div class="features-grid">
       <div class="feature-card">
         <h3>Technology & Magic Integration</h3>
-        <p>Our Modpack combines Technology and Magic, creating multiple paths for advancement and progression.</p>
+        <p>Our Modpack blends advanced tech and powerful magic, offering players two unique paths to thrive.</p>
       </div>
       <div class="feature-card">
         <h3>Enhanced Building</h3>
-        <p>Enhanced building with more decoration blocks and options.</p>
+        <p>Access a wide range of blocks and tools to make your builds truly stand out.</p>
       </div>
       <div class="feature-card">
         <h3>Advanced Exploration</h3>
-        <p>Explore new dungeons and structures filled with loot and lore.</p>
+        <p>Dive into dungeons and structures filled with secrets, danger, and loot.</p>
       </div>
       <div class="feature-card">
-        <h3>Quality of Life Improvements</h3>
-        <p>Better performance, inventory management, and useful information displays for smoother gameplay.</p>
+        <h3>Quality of Life</h3>
+        <p>Optimized UI, better performance, inventory tweaks, and helpful displays for an easier time surviving.</p>
       </div>
       <div class="feature-card">
-        <h3>Social & Community Features</h3>
-        <p>Join server events, trade with coins, and chat with nearby players using proximity voice.</p>
+        <h3>Social & Community</h3>
+        <p>Use proximity chat, take part in server events, and trade using our custom coin system.</p>
       </div>
       <div class="feature-card">
-        <h3>Revamping</h3>
-        <p>We are Revamping vanilla features like: Fishing, Enchanting, PotionMaking, Survival, Progression.</p>
+        <h3>Vanilla Revamped</h3>
+        <p>Fishing, enchanting, potions, survival: all improved and expanded.</p>
       </div>
       <div class="feature-card">
         <h3>Custom Quests</h3>
-        <p>Each House will have a custom Quest Line to follow!</p>
+        <p>Each House has their own questline that fits their story and goals.</p>
       </div>
     </div>
   </section>

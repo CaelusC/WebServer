@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Helianthus - Home</title>
   <style>
-    /* Global Styles */
     body {
       margin: 0;
       padding: 0;
@@ -18,12 +17,9 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 20px;
-      align-items: center;
-      align-content: center;
       text-align: center;
     }
 
-    /* Navigation */
     nav {
       background-color: #1a0f0a;
       padding: 1rem;
@@ -56,58 +52,76 @@
       color: #ffd700;
     }
 
-    /* Main Content */
     .main-content {
       background-color: #3d241a;
-      padding: 2rem;
+      padding: 2.5rem;
       border-radius: 10px;
       margin-top: 2rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      animation: fadeSlideIn 1s ease-out both;
+    }
+
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     h1 {
       color: #ffd700;
       text-align: center;
-      margin-bottom: 1.5rem;
-      font-size: 2rem;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      text-shadow: 1px 1px 4px #000;
     }
 
-    /* Image Grid */
+    p {
+      text-align: left;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
     .image-grid {
       display: grid;
-      grid-template-columns: repeat(3, 2fr);
-      gap: 0.1rem;
-      margin: auto;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-top: 3rem;
     }
 
     .image-container {
       position: relative;
-      width: 100%;
-      padding-bottom: 100%;
-      border-radius: 20px;
+      overflow: visible;
+      border-radius: 12px;
+      transition: transform 0.3s;
+      z-index: 1;
+    }
+
+    .image-container:hover {
+      z-index: 10;
     }
 
     .image-container img {
-      position: absolute;
       width: 100%;
       height: 100%;
-      object-fit: contain;
-      transition: transform 0.3s;
-      left: 50%;
-      transform: translateX(-50%);
+      object-fit: cover;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .image-container:hover img {
-      transform: translateX(-50%) scale(1.5);
+      transform: scale(1.1);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
     }
 
-  </style>
-  <style>
     .footer {
       width: 100%;
       padding: 20px 0;
       text-align: center;
-      font-family: 'MedievalSharp', cursive;
       color: #8b4513;
       position: relative;
       margin-top: 40px;
@@ -136,6 +150,20 @@
       font-size: 0.8em;
       opacity: 0.8;
     }
+
+    @media (max-width: 768px) {
+      nav li {
+        margin: 0 10px;
+      }
+
+      nav a {
+        font-size: 1rem;
+      }
+
+      .main-content {
+        padding: 1.5rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -154,18 +182,18 @@
 <div class="container">
   <section class="main-content">
     <h1>The Helianthus Server</h1>
-    <p><p>A world where your actions actually matter. This isn't an SMP where people build in the middle of nowhere or live alone. We are aiming for something different.</p>
 
-    <p>Our world revolves around Ancient Houses, each with their own story to tell and scores to settle. When you join, you'll become part of a Story and a Community - a House with its own territory and a destiny that you'll help shape.</p>
+    <p>A world where your actions actually matter. This isn't an SMP where people build in the middle of nowhere or live alone. We are aiming for something different.</p>
 
-    <p>We don't want to see the whole "Everyone does their own thing" approach anymore. Here, you will actually need each other to thrive. Your territory is your home base, but what you do with it, is up to you and your House Members. Want to expand? You can - if you've got the Resources and Coin to back it up.</p>
+    <p>Our world revolves around Ancient Houses, each with their own story to tell and scores to settle. When you join, you'll become part of a Story and a Community.. a House with its own territory and a destiny that you'll help shape.</p>
 
-    <p>Every House has a Unique Resource they specialize in, constantly Depending on each other to Progress. You might be into Mastering Agriculture, Exploring powerful magic, or Engineering machines and Digging for 'STONE' corp. Whatever might be your style, there's a place where you'll fit right in. But, be sure to make friends, no House can master everything alone!</p>
+    <p>We don't want to see the whole "Everyone does their own thing" approach anymore. Here, you will actually need each other to thrive. Your territory is your home base, but what you do with it is up to you and your House Members. Want to expand? You can - if you've got the Resources and Coin to back it up.</p>
+
+    <p>Every House has a Unique Resource they specialize in, constantly Depending on each other to Progress. You might be into Mastering Agriculture, Exploring powerful magic, or Engineering machines and Digging for 'STONE' corp. Whatever your style, there's a place where you'll fit right in. But make friends... no House can master everything alone!</p>
 
     <p>Don't be fooled, survival here isn't easy. We've completely overhauled how you'll need to think about staying alive. The threats are bigger, the challenges are tougher, but that just makes every victory more rewarding. For those brave enough to explore, there are secrets and rewards hidden in the darkest corners of our world.</p>
 
     <p>Ready to make some history? Pick a House. Start your story. Just don't expect an easy ride.</p>
-    <p></p>
 
     <div class="image-grid">
       <div class="image-container">
@@ -179,6 +207,7 @@
       </div>
     </div>
   </section>
+
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-text">Created by Caelus</div>
@@ -188,4 +217,3 @@
 </div>
 </body>
 </html>
-

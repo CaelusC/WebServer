@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Minecraft Server - Join Us</title>
+  <title>Helianthus - Join Us</title>
   <style>
     body {
       margin: 0;
@@ -19,14 +19,13 @@
       padding: 20px;
     }
 
-    /* Navigation */
     nav {
       background-color: #1a0f0a;
       padding: 1rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
 
     nav ul {
@@ -52,66 +51,73 @@
       color: #ffd700;
     }
 
-    .active {
-      color: #ffd700;
-      border-bottom: 2px solid #ffd700;
-    }
-
-    /* Main Content */
     .main-content {
       background-color: #3d241a;
-      padding: 2rem;
+      padding: 2.5rem;
       border-radius: 10px;
       margin-top: 2rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      animation: fadeSlideIn 1s ease-out both;
     }
 
-    h1, h2 {
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
       color: #ffd700;
       text-align: center;
-      margin-bottom: 1.5rem;
-    }
-
-    /* Join Section Styles */
-    .join-container {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .join-steps {
-      margin: 2rem 0;
-      padding: 2rem;
-      background-color: #2c1810;
-      border-radius: 8px;
-    }
-
-    .step {
       margin-bottom: 2rem;
-      padding: 1rem;
-      border-left: 3px solid #ffd700;
-      text-align: left;
-      background-color: #3d241a;
+      font-size: 2.5rem;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    .join-step {
+      background: rgba(0,0,0,0.2);
+      border-left: 5px solid #ffd700;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      padding: 20px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 1s ease forwards;
+      animation-delay: calc(var(--i, 0) * 0.2s);
+    }
+
+    .join-step:nth-child(1) { --i: 1; }
+    .join-step:nth-child(2) { --i: 2; }
+    .join-step:nth-child(3) { --i: 3; }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .step-number {
       color: #ffd700;
-      font-size: 1.2rem;
       font-weight: bold;
+      font-size: 1.2rem;
       margin-bottom: 0.5rem;
     }
 
     .join-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      max-width: 400px;
-      margin: 2rem auto;
+      text-align: center;
+      margin-top: 2rem;
     }
 
     .join-button {
       display: inline-block;
       padding: 1rem 2rem;
+      margin: 10px;
       border-radius: 8px;
       text-decoration: none;
       font-size: 1.2rem;
@@ -135,19 +141,18 @@
     }
 
     .note {
-      margin-top: 2rem;
-      padding: 1rem;
-      background-color: #2c1810;
+      background-color: rgba(0,0,0,0.2);
+      border-left: 5px solid #ffd700;
+      padding: 20px;
       border-radius: 8px;
+      margin-top: 2rem;
       font-style: italic;
     }
-  </style>
-  <style>
+
     .footer {
       width: 100%;
       padding: 20px 0;
       text-align: center;
-      font-family: 'MedievalSharp', cursive;
       color: #8b4513;
       position: relative;
       margin-top: 40px;
@@ -168,13 +173,14 @@
       font-size: 0.9em;
     }
 
-    .footer-text {
-      margin: 5px 0;
-    }
+    @media (max-width: 768px) {
+      nav li {
+        margin: 0 10px;
+      }
 
-    .footer-year {
-      font-size: 0.8em;
-      opacity: 0.8;
+      nav a {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -192,37 +198,34 @@
 </nav>
 
 <div class="container">
-  <section class="main-content">
-    <div class="join-container">
-      <h2>Join Our Community</h2>
+  <div class="main-content">
+    <h1>🌻 Join the Helianthus Server 🌻</h1>
 
-      <div class="join-steps">
-        <div class="step">
-          <div class="step-number">Step 1</div>
-          <p>Join our Discord server to Connect with our Community and stay Updated with the latest News and Announcements.</p>
-        </div>
-
-        <div class="step">
-          <div class="step-number">Step 2</div>
-          <p>Fill out our Application Form. This helps us maintain a Friendly and Trustworthy Community.</p>
-        </div>
-
-        <div class="step">
-          <div class="step-number">Step 3</div>
-          <p>Wait for our staff to Review your Application. You will know when we have Accepted/Denied you!</p>
-        </div>
-      </div>
-
-      <div class="join-buttons">
-        <a href="" class="join-button discord-button" target="_blank">Join Our Discord</a>
-        <a href="" class="join-button form-button" target="_blank">Fill Application Form</a>
-      </div>
-
-      <div class="note">
-        <p>Please make sure to join our Discord server before filling out the application form. This helps us verify your identity and communicate with you more effectively.</p>
-      </div>
+    <div class="join-step">
+      <div class="step-number">Step 1</div>
+      <p>Join our Discord server to connect with the community and stay updated on events and news.</p>
     </div>
-  </section>
+
+    <div class="join-step">
+      <div class="step-number">Step 2</div>
+      <p>Fill out our application form. This helps us maintain a safe and welcoming community.</p>
+    </div>
+
+    <div class="join-step">
+      <div class="step-number">Step 3</div>
+      <p>Wait for staff to review your application. You’ll get a response directly on Discord.</p>
+    </div>
+
+    <div class="join-buttons">
+      <a href="#" class="join-button discord-button">Join Our Discord</a>
+      <a href="#" class="join-button form-button">Fill Application Form</a>
+    </div>
+
+    <div class="note">
+      Please join the Discord before filling out the application. It helps us verify your identity and reach out easily.
+    </div>
+  </div>
+
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-text">Created by Caelus</div>
