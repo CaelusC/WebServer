@@ -173,6 +173,19 @@
       font-size: 0.9em;
     }
 
+    #application-form {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.4s ease, max-height 0.4s ease;
+      margin-top: 30px;
+    }
+
+    #application-form.visible {
+      opacity: 1;
+      max-height: 3000px; /* Just needs to be tall enough for the form */
+    }
+
     @media (max-width: 768px) {
       nav li {
         margin: 0 10px;
@@ -217,13 +230,33 @@
     </div>
 
     <div class="join-buttons">
-      <a href="#" class="join-button discord-button">Join Our Discord</a>
-      <a href="#" class="join-button form-button">Fill Application Form</a>
+      <a href="https://discord.gg/bnAgEJrYJK" class="join-button discord-button">Join Our Discord</a>
+      <a href="#" class="join-button form-button" onclick="toggleForm()">Fill Application Form</a>
     </div>
 
     <div class="note">
       Please join the Discord before filling out the application. It helps us verify your identity and reach out easily.
     </div>
+
+    <div id="application-form">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeZN9s41_ZZwD6VxuPjxEztQQt7zr8Vd8eCy2qQ-jEB25gS9A/viewform?embedded=true"
+              width="100%"
+              height="2041"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0">
+        Loading…
+      </iframe>
+    </div>
+    <script>
+      function toggleForm() {
+        const form = document.getElementById('application-form');
+        form.classList.toggle('visible');
+        if (form.classList.contains('visible')) {
+          form.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    </script>
   </div>
 
   <footer class="footer">
@@ -235,3 +268,4 @@
 </div>
 </body>
 </html>
+
