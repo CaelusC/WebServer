@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Helianthus - Features</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Helianthus - Lore</title>
   <style>
     body {
       margin: 0;
@@ -12,11 +12,13 @@
       color: #e0c9b1;
       font-family: 'Times New Roman', Times, serif;
     }
+
     .container {
-      max-width: 1200px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 30px 20px;
     }
+
     nav {
       background-color: #1a0f0a;
       padding: 1rem;
@@ -25,6 +27,7 @@
       z-index: 1000;
       box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
+
     nav ul {
       list-style: none;
       display: flex;
@@ -32,76 +35,135 @@
       margin: 0;
       padding: 0;
     }
+
     nav li {
       margin: 0 20px;
     }
+
     nav a {
       color: #e0c9b1;
       text-decoration: none;
       font-size: 1.2rem;
       transition: color 0.3s;
     }
+
     nav a:hover {
       color: #ffd700;
     }
+
     .main-content {
       background-color: #3d241a;
-      padding: 2.5rem;
+      padding: 3rem;
       border-radius: 10px;
       margin-top: 2rem;
       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
       animation: fadeSlideIn 1s ease-out both;
     }
+
     @keyframes fadeSlideIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    h2, h1 {
+      color: #ffd700;
+      margin-top: 0;
+      text-shadow: none;
+    }
+
     h2 {
-      color: #ffd700;
-      text-align: center;
       font-size: 2.2rem;
-      margin-bottom: 2rem;
-      text-shadow: 1px 1px 4px #000;
-    }
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-    .feature-card {
-      background-color: rgba(0,0,0,0.2);
-      padding: 1.5rem;
-      border-radius: 10px;
       text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: fadeUp 0.8s ease forwards;
-      transform: translateY(20px);
-      opacity: 0;
+      margin-bottom: 2.5rem;
     }
-    .feature-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 12px rgba(0,0,0,0.4);
+
+    h1 {
+      font-size: 1.5rem;
+      position: relative;
+      margin-top: 2.5rem;
+      margin-bottom: 0.5rem;
     }
-    @keyframes fadeUp {
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
+
+    h1::before {
+      content: "";
+      display: block;
+      height: 80px;
+      margin-top: -80px;
+      visibility: hidden;
     }
-    .feature-card h3 {
-      color: #ffd700;
+
+    p {
+      line-height: 1.7;
+      font-size: 1.1rem;
       margin-bottom: 1rem;
     }
+
+    ul {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-block {
+      background-color: rgba(60, 32, 24, 0.75);
+      padding: 1.5rem 1.8rem;
+      border-radius: 6px;
+      margin-bottom: 2rem;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 1s ease forwards;
+    }
+
+    .section-block:nth-of-type(2) { animation-delay: 0.1s; }
+    .section-block:nth-of-type(3) { animation-delay: 0.2s; }
+    .section-block:nth-of-type(4) { animation-delay: 0.3s; }
+    .section-block:nth-of-type(5) { animation-delay: 0.4s; }
+    .section-block:nth-of-type(6) { animation-delay: 0.5s; }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .toc {
+      background-color: rgba(0, 0, 0, 0.1);
+      border: 1px solid #5a3625;
+      border-radius: 8px;
+      padding: 1.2rem;
+      margin-bottom: 3rem;
+    }
+
+    .toc h1 {
+      margin-top: 0;
+      color: #ffd700;
+    }
+
+    .toc ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .toc li {
+      margin: 0.4rem 0;
+    }
+
+    .toc a {
+      color: #e0c9b1;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
     .footer {
       width: 100%;
       padding: 20px 0;
       text-align: center;
-      font-family: 'Times New Roman', Times, serif;
       color: #8b4513;
-      position: relative;
-      margin-top: 40px;
+      margin-top: 50px;
     }
+
     .footer::before {
       content: "✦";
       display: block;
@@ -110,24 +172,31 @@
       font-size: 24px;
       margin-bottom: 10px;
     }
+
     .footer-content {
       border-top: 2px solid #8b4513;
       padding-top: 15px;
       font-size: 0.9em;
     }
+
     .footer-text {
       margin: 5px 0;
     }
+
     .footer-year {
       font-size: 0.8em;
       opacity: 0.8;
     }
+
     @media (max-width: 768px) {
       nav li {
         margin: 0 10px;
       }
       nav a {
         font-size: 1rem;
+      }
+      .main-content {
+        padding: 1.5rem;
       }
     }
   </style>
@@ -137,8 +206,8 @@
   <ul>
     <li><a href="./index.html">Home</a></li>
     <li><a href="./about.html">About Us</a></li>
-    <li><a href="./rules.html">Server Rules</a></li>
-    <li><a href="./features.html">Features</a></li>
+    <li><a href="./rules.html">Rules</a></li>
+    <li><a href="./features.html">Lore</a></li>
     <li><a href="./houses.html">Houses</a></li>
     <li><a href="./guide.html">Guide</a></li>
     <li><a href="./join.html">Join Us</a></li>
@@ -146,42 +215,118 @@
 </nav>
 <div class="container">
   <section class="main-content">
-    <h2>Server Features</h2>
-    <div class="features-grid">
-      <div class="feature-card">
-        <h3>Technology & Magic Integration</h3>
-        <p>Our Modpack blends advanced tech and powerful magic, offering players two unique paths to thrive.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Enhanced Building</h3>
-        <p>Access a wide range of blocks and tools to make your builds truly stand out.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Advanced Exploration</h3>
-        <p>Dive into dungeons and structures filled with secrets, danger, and loot.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Quality of Life</h3>
-        <p>Optimized UI, better performance, inventory tweaks, and helpful displays for an easier time surviving.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Social & Community</h3>
-        <p>Use proximity chat, take part in server events, and trade using our custom coin system.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Vanilla Revamped</h3>
-        <p>Fishing, enchanting, potions, survival: all improved and expanded.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Custom Quests</h3>
-        <p>Each House has their own questline that fits their story and goals.</p>
-      </div>
+    <h2>Helianthus Mythologion</h2>
+
+    <div class="toc">
+      <h1>Table of Contents</h1>
+      <ul>
+        <li><a href="#collapse">Map of Helianthus</a></li>
+        <li><a href="#birth">Birth of Helianthus</a></li>
+        <li><a href="#houses">The Five Houses</a></li>
+        <li><a href="#siege">The Eternal Siege</a></li>
+        <li><a href="#role">Player Role</a></li>
+      </ul>
+    </div>
+
+    <div class="section-block">
+      <h1 id="collapse">⤷ Map of Helianthus</h1>
+      <p>
+        The world of Helianthus is a fractured land of extremes. Blistering deserts, choking jungles and frozen peaks.
+        At its center stands the Temple of Sun, the only stillness in the chaos.
+        <br><strong>This is the Map of the Whole Region for the First week. A radius of 2000 Blocks. Later on, the borders will expand for you to explore.</strong>
+      </p>
+      <a href="img/WorldMap.png" target="_blank">
+        <img src="img/WorldMap.png" style="max-width:100%; border-radius:8px; cursor: zoom-in;">
+      </a>
+      <p>
+        <br><strong>This is the Map of the limited Regions. You and your House are only allowed to settle in this Area.</strong>
+      </p>
+      <a href="img/Regionss.png" target="_blank">
+        <img src="img/Regionss.png" style="max-width:100%; border-radius:8px; cursor: zoom-in;">
+      </a>
+      <p>
+        <strong>Each Region has a name and Starting Price. To obtain a Region, you will have to bid with coin:</strong>
+        <br>Crown Orchard Hills: <strong style="color: gold">100 Gold Coins</strong>
+        <br>Petalspire Canopy: <strong style="color: gold">120 Gold Coins</strong>
+        <br>Frist: <strong style="color: gold">50 Gold Coins</strong>
+        <br>TallPines: <strong style="color: gold">350 Gold Coins</strong>
+        <br>Pale Blehlands: <strong style="color: gold">100 Gold Coins</strong>
+        <br>The Bloomtops: <strong style="color: gold">50 Gold Coins</strong>
+        <br>The Withering Hill: <strong style="color: gold">150 Gold Coins</strong>
+        <br>The Witches Emberroot: <strong style="color: gold">350 Gold Coins</strong>
+        <br>Amethyst Bloom: <strong style="color: gold">230 Gold Coins</strong>
+        <br>Savannah Peaks: <strong style="color: gold">300 Gold Coins</strong>
+        <br>Forgotten Lumbs: <strong style="color: gold">160 Gold Coins</strong>
+        <br>Stunted Wilds: <strong style="color: gold">350 Gold Coins</strong>
+        <br>Cliffwake Expanse: <strong style="color: gold">350 Gold Coins</strong>
+        <br>Twilight Mahogany: <strong style="color: gold">400 Gold Coins</strong>
+        <br>Sodden Tread: <strong style="color: gold">200 Gold Coins</strong>
+        <br>The Mirewild Tangleb: <strong style="color: gold">150 Gold Coins</strong>
+        <br>Chrome's Hollow: <strong style="color: gold">250 Gold Coins</strong>
+        <br>
+        <br>Houses can only claim Regions by bidding Coin, the first Region is permanent, others can be stolen by raiding towers with at least 4 members and holding the flag for 6 hours, only one steal per week is allowed.
+        <br><strong>Full details are in the rules page.</strong>
+      </p>
+    </div>
+
+    <div class="section-block">
+      <h1 id="birth">⤷ Birth of Helianthus</h1>
+      <p>
+        From the Dark Pits, a little drop of light pushed out. Neither god nor beast, it radiates warmth like a dying star. It speaks in tongues. It dreams in clouds. And it watches. From its birth it has enjoyed suffering, and now it will enjoy your suffering. Easily upset, you best worship it or suffer its wrath.
+      </p>
+    </div>
+
+    <div class="section-block">
+      <h1 id="houses">⤷ The Five Houses</h1>
+      <p>
+        The world is pulled in different directions by many powers. Among them, three nations stand out the most.
+        Leria is ruled by a Tzar and his family. They sent to the New World the people now known as House Demeter to spread their religion and their philosophy of agricultural dominion.
+        The Covenant is a network of Academies spread across the world, bound together by their hunger for power. Ruled by the Supreme Arch Mage, they sent a group now known as House Theurgy to the New World to hunt down magical artifacts and knowledge and bring it back.
+        Then there’s STONE.corp. A massive company stretching across multiple regions with one goal and one goal only. Strip the earth of every last resource and turn it into profit. They sent a team now called House Adamant to do exactly that in the New World.
+      </p>
+      <br>
+      <br><h3><strong style="color: darkorange">House Demeter:</strong></h3>
+      <strong>Personality:</strong> Peaceful. Proud. Almost cult-like in their calm. They speak of "the soil" as if it were sacred.
+      <br><strong>Building Style:</strong> Rural agrarian with religious undertones. Think terraced farms, windmills, stone chapels covered in vines. Earth tones like mossy cobble, coarse dirt, stripped oak. Banners with wheat or golden sun motifs. Interiors filled with books, bread, and crop offerings. Every home feels lived in, old, and worshipful.
+      <br>Use bees, hanging lanterns, and lush greenery. Fields aren't just farms, they're shrines.
+
+      <br><h3><strong style="color: purple">House Theurgy:</strong></h3>
+      <strong>Personality:</strong> Obsessed. Coldly curious. Their wonder is intellectual, not emotional. They feel nothing for the land, only what can be learned or twisted. It's all experiment, no certainty.
+      <br><strong>Building Style:</strong> Arcane gothic. Blackstone, deep slate, warped wood. Spires and dark towers, ritual circles, glowing purple veins. Symbols everywhere like enchantment tables, crying obsidian, lecterns full of forbidden texts.
+      <br>Use soul fire, dripstone, and candles for an eerie atmosphere. Rooms are functional, not cozy. Every block feels placed with purpose. Even their gardens are alchemical.
+
+      <br><h3><strong style="color: darkblue">House Adamant:</strong></h3>
+      <strong>Personality:</strong> Cold. Efficient. Dominating. They don’t care about the land, the people, or the cost. Everything is a system to be optimized. Progress is profit.
+      <br><strong>Building Style:</strong> Hyper-industrial and fully automated. Their bases feel more like machines than buildings. Think massive steampunk megastructures humming with redstone circuits, gears, and pipes. Sorting systems. Auto-smelters. Drill rigs powered by lava or fuel cells.
+      <br>Farms are fully automated with machinery. Even tree farms are mechanized. Every block is placed in care for Utility. Their mines/homes look like surgical wounds in the world.
+    </div>
+
+    <div class="section-block">
+      <h1 id="siege">⤷ The Eternal Siege</h1>
+      <p>
+        The mobs have changed. No longer beasts. No longer hollow.
+        <br>Helianthus, in his unknowable will, breathed consciousness into their empty forms. A cruel gift. Now they think. They speak in silence. They move with purpose. Packs swarm like wolves, flank close in like soldiers. One distracts. One surrounds. One kills.
+        <br>They do not sleep. They do not retreat. Their only reason to exist is to tear you into pieces.
+        <br>
+        <br>Some say the fire around the spawn temple burns with divine intent. A boundary set by Helianthus himself, to hold back the creatures. Within the flames, a fragile peace remains. Traders whisper deals. Outsiders huddle in corners. Old enemies exchange food instead of blood. All kept alive by fear of the ones waiting outside.
+
+        <br>They call it the Siege. But this is not a war. This is a massacre. The mobs yearn for our flesh.
+
+        <br>And they want us to know it.
+      </p>
+    </div>
+
+    <div class="section-block">
+      <h1 id="role">⤷ Player Role</h1>
+      <p>
+        You arrive in the dark with a gift from Helianthus. Your task: choose a House and claim relics. But most importantly.. Hold Dominion over the New World, only one House can truly win.
+      </p>
     </div>
   </section>
   <footer class="footer">
     <div class="footer-content">
-      <div class="footer-text">Created by Caelus</div>
-      <div class="footer-year">© 2025 Caelus' Server. All rights reserved.</div>
+      <div class="footer-text">Written in the Book of Flame</div>
+      <div class="footer-year">© 2025 Helianthus Server. All lore subject to mutation.</div>
     </div>
   </footer>
 </div>

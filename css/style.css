@@ -151,13 +151,13 @@ textarea {
 
   p,
   h2,
-  h3 {
+  h1 {
     orphans: 3;
     widows: 3;
   }
 
   h2,
-  h3 {
+  h1 {
     page-break-after: avoid;
   }
 }
