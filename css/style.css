@@ -161,4 +161,11 @@ textarea {
     page-break-after: avoid;
   }
 }
+@font-face {
+  font-family: minecraftFont;
+  src: url("/Pixel Digivolve.otf");
+}
 
+div {
+  font-family: minecraftFont, serif;
+}
