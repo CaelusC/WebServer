@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Houses | Helianthus Server</title>
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="./assets/icons/favicon.ico">
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
@@ -24,77 +24,98 @@
     </div>
 </nav>
 
-<main>
+<main id="main-content">
     <section class="o-section">
-        <div class="o-container">
+        <div class="o-container o-container--narrow">
             <h1 class="u-text-center">Houses of the Realm</h1>
-            <p class="u-text-center u-mb-8">Three major factions shape this new world.</p>
+            <p class="u-text-center u-mb-12" style="font-size: 1.25rem; color: var(--color-text-secondary);">Three major factions shape this new world.</p>
 
             <div class="c-card c-card--adamant" data-animate>
-                <h2 class="c-card__title">House of Adamant</h2>
-                <div class="o-grid o-grid--2-col">
-                    <div><img src="./assets/images/Miner house.png" alt="House Adamant" style="border-radius: 12px;"></div>
-                    <div>
-                        <p><strong>S</strong>ystematic <strong>T</strong>akeover & <strong>O</strong>ptimization of <strong>N</strong>atural <strong>E</strong>xtractives</p>
-                        <p>These are STONE.corp's industrial colonists. Ruthless, structured, and all about profit.</p>
-                        <h3>Hard Monopolies:</h3>
-                        <ul>
-                            <li>'Create' & 'Immersive Engineering' mods</li>
-                            <li>Rail systems and Redstone automation</li>
-                        </ul>
-                        <h3>Soft Monopolies:</h3>
-                        <ul>
-                            <li>Mining, digging and excavation</li>
-                            <li>Transportation of items and entities</li>
-                        </ul>
-                        <a href="./assets/documents/Adamant_Constitution.pdf" target="_blank"
-                           class="c-btn u-mt-4">Read Constitution</a>
+                <div class="c-card__header">
+                    <h2 class="c-card__title" style="color: #4a90e2;">House of Adamant</h2>
+                </div>
+                <div class="c-card__body">
+                    <div class="o-grid o-grid--2-col">
+                        <div>
+                            <img src="./assets/images/Miner house.png" alt="House Adamant"
+                                 style="border-radius: 12px; width: 100%;">
+                        </div>
+                        <div>
+                            <p><strong>S</strong>ystematic <strong>T</strong>akeover & <strong>O</strong>ptimization of <strong>N</strong>atural <strong>E</strong>xtractives</p>
+                            <p>These are STONE.corp's industrial colonists. Ruthless, structured, and all about profit.</p>
+                            <h3 style="font-size: 1.25rem; margin-top: 1.5rem;">Hard Monopolies:</h3>
+                            <ul>
+                                <li>'Create' & 'Immersive Engineering' mods</li>
+                                <li>Rail systems and Redstone automation</li>
+                            </ul>
+                            <h3 style="font-size: 1.25rem; margin-top: 1rem;">Soft Monopolies:</h3>
+                            <ul>
+                                <li>Mining, digging and excavation</li>
+                                <li>Transportation of items and entities</li>
+                            </ul>
+                            <a href="./assets/documents/Adamant_Constitution.pdf" target="_blank"
+                               class="c-btn u-mt-4">Read Constitution</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="c-card c-card--theurgy" data-animate>
-                <h2 class="c-card__title">House of Theurgy</h2>
-                <div class="o-grid o-grid--2-col">
-                    <div><img src="./assets/images/wizard.png" alt="House Theurgy" style="border-radius: 12px;"></div>
-                    <div>
-                        <p>Witches and Warlocks of the Covenant Academy. Research-obsessed, dangerous, and not entirely sane.</p>
-                        <h3>Hard Monopolies:</h3>
-                        <ul>
-                            <li>'Ars Nouveau' & 'Apotheosis' mods</li>
-                            <li>'Modular Golems' mod</li>
-                            <li>Hostile mob farms</li>
-                        </ul>
-                        <h3>Soft Monopolies:</h3>
-                        <ul>
-                            <li>Magical resource gathering</li>
-                            <li>Dungeon raids and exploring dimensions</li>
-                        </ul>
-                        <a href="./assets/documents/Theurgy_Constitution.pdf" target="_blank"
-                           class="c-btn u-mt-4">Read Constitution</a>
+            <div class="c-card c-card--theurgy u-mt-8" data-animate>
+                <div class="c-card__header">
+                    <h2 class="c-card__title" style="color: #9b59b6;">House of Theurgy</h2>
+                </div>
+                <div class="c-card__body">
+                    <div class="o-grid o-grid--2-col">
+                        <div>
+                            <img src="./assets/images/wizard.png" alt="House Theurgy" style="border-radius: 12px;
+                            width: 100%;">
+                        </div>
+                        <div>
+                            <p>Witches and Warlocks of the Covenant Academy. Research-obsessed, dangerous, and not entirely sane.</p>
+                            <h3 style="font-size: 1.25rem; margin-top: 1.5rem;">Hard Monopolies:</h3>
+                            <ul>
+                                <li>'Ars Nouveau' & 'Apotheosis' mods</li>
+                                <li>'Modular Golems' mod</li>
+                                <li>Hostile mob farms</li>
+                            </ul>
+                            <h3 style="font-size: 1.25rem; margin-top: 1rem;">Soft Monopolies:</h3>
+                            <ul>
+                                <li>Magical resource gathering</li>
+                                <li>Dungeon raids and exploring dimensions</li>
+                            </ul>
+                            <a href="./assets/documents/Theurgy_Constitution.pdf" target="_blank"
+                               class="c-btn u-mt-4">Read Constitution</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="c-card c-card--demeter" data-animate>
-                <h2 class="c-card__title">House of Demeter</h2>
-                <div class="o-grid o-grid--2-col">
-                    <div><img src="./assets/images/farmer.png" alt="House Demeter" style="border-radius: 12px;"></div>
-                    <div>
-                        <p>Peaceful but cult-like agriculturalists. Sent by Tzar of Leria, they value harmony and community.</p>
-                        <h3>Hard Monopolies:</h3>
-                        <ul>
-                            <li>'Villager Recruits & Workers' mods</li>
-                            <li>'Farmer's Delight' & food mods</li>
-                            <li>Farming and Herbalism</li>
-                        </ul>
-                        <h3>Soft Monopolies:</h3>
-                        <ul>
-                            <li>Breeding and livestock</li>
-                            <li>Potion & Wine making</li>
-                        </ul>
-                        <a href="./assets/documents/Demeter_Constitution.pdf" target="_blank"
-                           class="c-btn u-mt-4">Read Constitution</a>
+            <div class="c-card c-card--demeter u-mt-8" data-animate>
+                <div class="c-card__header">
+                    <h2 class="c-card__title" style="color: #27ae60;">House of Demeter</h2>
+                </div>
+                <div class="c-card__body">
+                    <div class="o-grid o-grid--2-col">
+                        <div>
+                            <img src="./assets/images/farmer.png" alt="House Demeter" style="border-radius: 12px;
+                            width: 100%;">
+                        </div>
+                        <div>
+                            <p>Peaceful but cult-like agriculturalists. Sent by Tzar of Leria, they value harmony and community.</p>
+                            <h3 style="font-size: 1.25rem; margin-top: 1.5rem;">Hard Monopolies:</h3>
+                            <ul>
+                                <li>'Villager Recruits & Workers' mods</li>
+                                <li>'Farmer's Delight' & food mods</li>
+                                <li>Farming and Herbalism</li>
+                            </ul>
+                            <h3 style="font-size: 1.25rem; margin-top: 1rem;">Soft Monopolies:</h3>
+                            <ul>
+                                <li>Breeding and livestock</li>
+                                <li>Potion & Wine making</li>
+                            </ul>
+                            <a href="./assets/documents/Demeter_Constitution.pdf" target="_blank"
+                               class="c-btn u-mt-4">Read Constitution</a>
+                        </div>
                     </div>
                 </div>
             </div>
