@@ -1,219 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Helianthus - Home</title>
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #2c1810;
-      color: #e0c9b1;
-      font-family: 'minecraftFont'
-    }
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-      text-align: center;
-    }
+    <!-- Primary Meta Tags -->
+    <title>Helianthus Server | Lore-Driven Minecraft Survival</title>
+    <meta name="title" content="Helianthus Server | Lore-Driven Minecraft Survival">
+    <meta name="description" content="Join Helianthus, a unique Minecraft server ruled by a merciless Sun God. Choose your House, master their specialties, and survive in a harsh, lore-rich world.">
+    <meta name="keywords" content="Minecraft server, survival, roleplay, multiplayer, houses, lore, modded Minecraft, PvE, community">
+    <meta name="author" content="Caelus">
+    <meta name="robots" content="index, follow">
 
-    nav {
-      background-color: #1a0f0a;
-      padding: 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    }
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://helianthus-server.com/">
+    <meta property="og:title" content="Helianthus Server | Lore-Driven Minecraft Survival">
+    <meta property="og:description" content="Choose your House and survive under the merciless Sun God. A unique lore-driven Minecraft experience.">
+    <meta property="og:image" content="https://helianthus-server.com/assets/images/og-image.jpg">
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      margin: 0;
-      padding: 0;
-    }
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://helianthus-server.com/">
+    <meta property="twitter:title" content="Helianthus Server | Lore-Driven Minecraft Survival">
+    <meta property="twitter:description" content="Choose your House and survive under the merciless Sun God.">
+    <meta property="twitter:image" content="https://helianthus-server.com/assets/images/og-image.jpg">
 
-    nav li {
-      margin: 0 20px;
-    }
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
 
-    nav a {
-      color: #e0c9b1;
-      text-decoration: none;
-      font-size: 1.2rem;
-      transition: color 0.3s;
-    }
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#2c1810">
+    <meta name="msapplication-TileColor" content="#2c1810">
 
-    nav a:hover {
-      color: #ffd700;
-    }
+    <!-- Fonts -->
+    <link rel="preload" href="./assets/fonts/Pixel Digivolve.otf" as="font" type="font/otf" crossorigin>
 
-    .main-content {
-      text-align: center;
-      background-color: #3d241a;
-      padding: 2.5rem;
-      border-radius: 10px;
-      margin-top: 2rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      animation: fadeSlideIn 1s ease-out both;
-    }
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./assets/css/main.css">
 
-    @keyframes fadeSlideIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://discord.gg" crossorigin>
 
-    h1 {
-      color: #ffd700;
-      text-align: center;
-      margin-bottom: 2rem;
-      font-size: 2.5rem;
-    }
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://helianthus-server.com/">
 
-    p {
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-    }
-
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-      margin-top: 3rem;
-    }
-
-    .image-container {
-      position: relative;
-      overflow: visible;
-      border-radius: 12px;
-      transition: transform 0.3s;
-      z-index: 1;
-    }
-
-    .image-container:hover {
-      z-index: 10;
-    }
-
-    .image-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 12px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .image-container:hover img {
-      transform: scale(1.1);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-    }
-
-    .footer {
-      width: 100%;
-      padding: 20px 0;
-      text-align: center;
-      color: #8b4513;
-      position: relative;
-      margin-top: 40px;
-    }
-
-    .footer::before {
-      content: "✦";
-      display: block;
-      text-align: center;
-      color: #8b4513;
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .footer-content {
-      border-top: 2px solid #8b4513;
-      padding-top: 15px;
-      font-size: 0.9em;
-    }
-
-    .footer-text {
-      margin: 5px 0;
-    }
-
-    .footer-year {
-      font-size: 0.8em;
-      opacity: 0.8;
-    }
-
-    @media (max-width: 768px) {
-      nav li {
-        margin: 0 10px;
-      }
-
-      nav a {
-        font-size: 1rem;
-      }
-
-      .main-content {
-        text-align: center;
-        padding: 1.5rem;
-      }
-    }
-  </style>
+    <!-- Modernizr for feature detection -->
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
 </head>
+
 <body>
-<nav>
-  <ul>
-    <li><a href="./index.html">Home</a></li>
-    <li><a href="./about.html">About Us</a></li>
-    <li><a href="./rules.html">Rules</a></li>
-    <li><a href="./features.html">Lore</a></li>
-    <li><a href="./houses.html">Houses</a></li>
-    <li><a href="./guide.html">Guide</a></li>
-    <li><a href="./join.html">Join Us</a></li>
-  </ul>
+<!-- Skip to content link for accessibility -->
+<a href="#main-content" class="u-sr-only">Skip to main content</a>
+
+<!-- Navigation -->
+<nav class="c-nav" role="navigation" aria-label="Main navigation">
+    <div class="o-container">
+        <div class="c-nav__container">
+            <ul class="c-nav__list" role="list">
+                <li class="c-nav__item">
+                    <a href="/" class="c-nav__link" aria-label="Home page">Home</a>
+                </li>
+                <li class="c-nav__item">
+                    <a href="/about.html" class="c-nav__link" aria-label="About us page">About</a>
+                </li>
+                <li class="c-nav__item">
+                    <a href="/rules.html" class="c-nav__link" aria-label="Server rules">Rules</a>
+                </li>
+                <li class="c-nav__item">
+                    <a href="/lore.html" class="c-nav__link" aria-label="Server lore and story">Lore</a>
+                </li>
+                <li class="c-nav__item">
+                    <a href="/houses.html" class="c-nav__link" aria-label="Three houses information">Houses</a>
+                </li>
+                <li class="c-nav__item">
+                    <a href="/guide.html" class="c-nav__link" aria-label="Getting started guide">Guide</a>
+                </li>
+                <li class="c-nav__item">
+                    <a href="/join.html" class="c-nav__link c-btn c-btn--secondary" aria-label="Join the server">Join Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
 
-<div class="container">
-  <section class="main-content">
-    <h1>The Helianthus Server</h1>
+<!-- Main Content -->
+<main id="main-content" role="main">
+    <!-- Hero Section -->
+    <section class="c-hero o-section" aria-labelledby="hero-title">
+        <div class="o-container">
+            <h1 id="hero-title" class="c-hero__title">The Helianthus Server</h1>
 
-    <p style="color: #ffd700; font-size: 1.3rem;">
-      <i>The world of Helianthus is ruled by a merciless Sun God. His light brings ruin, not warmth. Crops wither, rivers dry, and those who can't adapt don't last long.</i>
-    </p>
+            <p class="c-hero__subtitle">
+                <em>The world of Helianthus is ruled by a merciless Sun God. His light brings ruin, not warmth. Crops wither, rivers dry, and those who can't adapt don't last long.</em>
+            </p>
+        </div>
+    </section>
 
-    <p>The Server isn’t built for loners. No players scattered in quiet bases. Everything revolves around the Three Ancient Houses: <strong><span style="color: dodgerblue;">Adamant</span>, <span style="color: purple;">Theurgy</span>, and <span style="color: darkorange;">Demeter</span></strong>. Old powers with territory, history, and grudges to protect.</p>
-    <p>You join a House to survive. Each has its own land, role, and way of enduring Helianthus. Your story and your obligations start there. Act like your House!!!</p>
-    <p>House regions mean safety and resources. Expanding takes people, strategy, and Coin. What your House has, others want. What you don’t, you trade for. Nothing’s free.</p>
-    <p>Each House specializes in something. Farming, Magic, Machinery, Alchemy, Management. No House can do it all. You must rely on others, whether you like it or not. Progress and setbacks are shared.</p>
-    <p>Build walls and protect yourself, outside the walls, the world is unbearable. Stronger mobs. Harsher weather. Food runs low. Vanilla strategies won’t save you. Mistakes cost gear, time, and lives. But deeper out, things stir old, buried, dangerous, and maybe worth the risk.</p>
-    <p>Pick a House. Take your place. Learn to survive. Helianthus doesn’t care who you are. Worship beneath him, and maybe his light spares you one more day.</p>
+    <!-- Introduction Section -->
+    <section class="o-section" aria-labelledby="intro-title">
+        <div class="o-container o-container--narrow">
+            <div class="c-card" data-animate>
+                <div class="c-card__body">
+                    <p>The Server isn't built for loners. No players scattered in quiet bases. Everything revolves around the Three Ancient Houses: <strong><span class="u-text-primary" style="color: dodgerblue;">Adamant</span>, <span class="u-text-primary" style="color: purple;">Theurgy</span>, and <span class="u-text-primary" style="color: darkorange;">Demeter</span></strong>. Old powers with territory, history, and grudges to protect.</p>
 
-    <div class="image-grid">
-      <div class="image-container">
-        <img src="img/mc1.jpg" alt="Server Screenshot">
-      </div>
-      <div class="image-container">
-        <img src="img/mc2.jpg" alt="Server Screenshot">
-      </div>
-      <div class="image-container">
-        <img src="img/mc3.jpg" alt="Server Screenshot">
-      </div>
+                    <p>You join a House to survive. Each has its own land, role, and way of enduring Helianthus. Your story and your obligations start there. <strong>Act like your House!!!</strong></p>
+
+                    <p>House regions mean safety and resources. Expanding takes people, strategy, and Coin. What your House has, others want. What you don't, you trade for. Nothing's free.</p>
+
+                    <p>Each House specializes in something. Farming, Magic, Machinery, Alchemy, Management. No House can do it all. You must rely on others, whether you like it or not. Progress and setbacks are shared.</p>
+
+                    <p>Build walls and protect yourself, outside the walls, the world is unbearable. Stronger mobs. Harsher weather. Food runs low. Vanilla strategies won't save you. Mistakes cost gear, time, and lives. But deeper out, things stir—old, buried, dangerous, and maybe worth the risk.</p>
+
+                    <p>Pick a House. Take your place. Learn to survive. Helianthus doesn't care who you are. Worship beneath him, and maybe his light spares you one more day.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="o-section" aria-labelledby="gallery-title">
+        <div class="o-container">
+            <h2 id="gallery-title" class="u-text-center u-mb-12">Experience the World</h2>
+
+            <div class="c-gallery">
+                <figure class="c-gallery__item" data-animate>
+                    <img
+                            src="./assets/images/mc1.jpg"
+                            alt="Vast landscape of Helianthus server world"
+                            class="c-gallery__image"
+                            loading="lazy"
+                            width="800"
+                            height="600"
+                    >
+                </figure>
+
+                <figure class="c-gallery__item" data-animate>
+                    <img
+                            src="./assets/images/mc2.jpg"
+                            alt="Player settlement and house architecture"
+                            class="c-gallery__image"
+                            loading="lazy"
+                            width="800"
+                            height="600"
+                    >
+                </figure>
+
+                <figure class="c-gallery__item" data-animate>
+                    <img
+                            src="/assets/images/mc3.jpg"
+                            alt="Detailed building and construction in Helianthus"
+                            class="c-gallery__image"
+                            loading="lazy"
+                            width="800"
+                            height="600"
+                    >
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="o-section" aria-labelledby="cta-title">
+        <div class="o-container o-container--narrow">
+            <div class="c-card u-text-center" data-animate>
+                <div class="c-card__header">
+                    <h2 id="cta-title" class="c-card__title">Ready to Begin Your Journey?</h2>
+                </div>
+                <div class="c-card__body">
+                    <p class="u-mb-8">Join our Discord community, choose your House, and start your story in Helianthus.</p>
+                    <a href="/join.html" class="c-btn c-btn--large" aria-label="Join Helianthus server">
+                        Join the Server
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="c-footer" role="contentinfo">
+    <div class="o-container">
+        <div class="c-footer__content">
+            <p class="c-footer__text">Created by Caelus</p>
+            <p class="c-footer__text">
+                <small>&copy; 2025 Helianthus Server. All rights reserved.</small>
+            </p>
+            <p class="c-footer__text">
+                <small>
+                    <a href="/privacy.html" aria-label="Privacy policy">Privacy</a> |
+                    <a href="/terms.html" aria-label="Terms of service">Terms</a>
+                </small>
+            </p>
+        </div>
     </div>
-  </section>
+</footer>
 
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-text">Created by Caelus</div>
-      <div class="footer-year">© 2025 Caelus' Server. All rights reserved.</div>
-    </div>
-  </footer>
-</div>
+<!-- Scripts -->
+<script src="./assets/js/app.js" defer></script>
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Helianthus Server",
+        "description": "A unique lore-driven Minecraft survival server with three ancient houses",
+        "url": "https://helianthus-server.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://helianthus-server.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+</script>
 </body>
 </html>

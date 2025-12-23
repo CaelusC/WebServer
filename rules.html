@@ -2,209 +2,101 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Helianthus - Server Rules</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #2c1810;
-            color: #e0c9b1;
-            font-family: 'minecraftFont'
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        nav {
-            background-color: #1a0f0a;
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav li {
-            margin: 0 20px;
-        }
-
-        nav a {
-            color: #e0c9b1;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #ffd700;
-        }
-
-        .main-content {
-            background-color: #3d241a;
-            padding: 2.5rem;
-            border-radius: 10px;
-            margin-top: 2rem;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            animation: fadeSlideIn 1s ease-out both;
-        }
-
-        @keyframes fadeSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        h1 {
-            color: #ffd700;
-            text-align: center;
-            margin-bottom: 2rem;
-            font-size: 2.5rem;
-            text-shadow: 1px 1px 4px #000;
-        }
-
-        .rule-section {
-            margin-bottom: 2rem;
-            padding: 20px;
-            border-left: 5px solid #ffd700;
-            background: rgba(0,0,0,0.2);
-            border-radius: 8px;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeUp 1s ease forwards;
-            animation-delay: calc(var(--i, 0) * 0.2s);
-        }
-
-        .rule-section:nth-child(2) { --i: 1; }
-        .rule-section:nth-child(3) { --i: 2; }
-        .rule-section:nth-child(4) { --i: 3; }
-        .rule-section:nth-child(5) { --i: 4; }
-        .rule-section:nth-child(6) { --i: 5; }
-
-        @keyframes fadeUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .rule-section h2 {
-            color: #ffd700;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .rule-section ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .rule-section li {
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 1rem;
-        }
-
-        .rule-section li::before {
-            content: "\26A0";
-            position: absolute;
-            left: 0;
-            color: #ffd700;
-        }
-
-        .constitution-download {
-            display: inline-block;
-            margin-top: 10px;
-            color: #ffd700;
-            font-weight: bold;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        .constitution-download:hover {
-            color: #ffffff;
-            text-decoration: underline;
-        }
-
-        .footer {
-            width: 100%;
-            padding: 20px 0;
-            text-align: center;
-            color: #8b4513;
-            position: relative;
-            margin-top: 40px;
-        }
-
-        .footer::before {
-            content: "✦";
-            display: block;
-            text-align: center;
-            color: #8b4513;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .footer-content {
-            border-top: 2px solid #8b4513;
-            padding-top: 15px;
-            font-size: 0.9em;
-        }
-
-        @media (max-width: 768px) {
-            nav li {
-                margin: 0 10px;
-            }
-
-            nav a {
-                font-size: 1rem;
-            }
-        }
-    </style>
+    <title>Server Rules | Helianthus Server</title>
+    <meta name="description" content="Read the official rules and guidelines for the Helianthus Minecraft server.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About Us</a></li>
-        <li><a href="./rules.html">Rules</a></li>
-        <li><a href="./features.html">Lore</a></li>
-        <li><a href="./houses.html">Houses</a></li>
-        <li><a href="./guide.html">Guide</a></li>
-        <li><a href="./join.html">Join Us</a></li>
-    </ul>
+<nav class="c-nav" role="navigation">
+    <div class="o-container">
+        <div class="c-nav__container">
+            <ul class="c-nav__list">
+                <li class="c-nav__item"><a href="/index.html" class="c-nav__link">Home</a></li>
+                <li class="c-nav__item"><a href="/about.html" class="c-nav__link">About</a></li>
+                <li class="c-nav__item"><a href="/rules.html" class="c-nav__link">Rules</a></li>
+                <li class="c-nav__item"><a href="/lore.html" class="c-nav__link">Lore</a></li>
+                <li class="c-nav__item"><a href="/houses.html" class="c-nav__link">Houses</a></li>
+                <li class="c-nav__item"><a href="/guide.html" class="c-nav__link">Guide</a></li>
+                <li class="c-nav__item"><a href="/join.html" class="c-nav__link c-btn c-btn--secondary">Join Us</a></li>
+            </ul>
+        </div>
+    </div>
 </nav>
 
-<div class="container">
-    <div class="main-content">
-        <h1>⚖️ Rules of the Helianthus Realm ⚖️</h1>
+<main id="main-content" role="main">
+    <section class="o-section">
+        <div class="o-container o-container--narrow">
+            <h1 class="u-text-center">Rules of the Helianthus Realm</h1>
 
-        <a class="constitution-download" href="The Codex of Helianthus.pdf" target="_blank">📄Official Helianthus RuleBook</a>
-        <br>
-        <a class="constitution-download" href="FarmPermits.pdf" target="_blank">📄Automatic Farm Permits</a>
-    </div>
+            <div class="c-card" data-animate>
+                <div class="c-card__body u-text-center">
+                    <p class="u-mb-8">All official rules and regulations are documented in the official rulebook. Please read carefully before joining.</p>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-text">Created by Caelus</div>
-            <div class="footer-year">© 2025 Caelus' Server. All rights reserved.</div>
+                    <div class="o-grid o-grid--2-col">
+                        <a href="./assets/documents/The Codex of Helianthus.pdf" target="_blank" class="c-btn">
+                            Official Helianthus RuleBook
+                        </a>
+
+                        <a href="./assets/documents/FarmPermits.pdf" target="_blank" class="c-btn">
+                            Automatic Farm Permits
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="u-text-center u-mt-12">Quick Guidelines</h2>
+
+            <div class="c-card c-card--adamant" data-animate>
+                <div class="c-card__header">
+                    <h3 class="c-card__title">General Behavior</h3>
+                </div>
+                <div class="c-card__body">
+                    <p>Respect all players and staff. No harassment, discrimination, or toxic behavior of any kind.</p>
+                </div>
+            </div>
+
+            <div class="c-card c-card--theurgy" data-animate>
+                <div class="c-card__header">
+                    <h3 class="c-card__title">House Rules</h3>
+                </div>
+                <div class="c-card__body">
+                    <p>Act according to your House's values and constitution. Represent your House with honor.</p>
+                </div>
+            </div>
+
+            <div class="c-card c-card--demeter" data-animate>
+                <div class="c-card__header">
+                    <h3 class="c-card__title">Gameplay</h3>
+                </div>
+                <div class="c-card__body">
+                    <p>No griefing, stealing, or exploiting. Play fair and survive through skill and cooperation.</p>
+                </div>
+            </div>
+
+            <div class="c-card" data-animate>
+                <div class="c-card__header">
+                    <h3 class="c-card__title">Territory & Combat</h3>
+                </div>
+                <div class="c-card__body">
+                    <p>Respect territorial boundaries. Follow official rules for raids and combat. PvP is regulated.</p>
+                </div>
+            </div>
         </div>
-    </footer>
-</div>
+    </section>
+</main>
+
+<footer class="c-footer" role="contentinfo">
+    <div class="o-container">
+        <div class="c-footer__content">
+            <p class="c-footer__text">Created by Caelus</p>
+            <p class="c-footer__text"><small>&copy; 2025 Helianthus Server. All rights reserved.</small></p>
+        </div>
+    </div>
+</footer>
+
+<script src="./assets/js/app.js" defer></script>
 </body>
 </html>

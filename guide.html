@@ -4,230 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Helianthus - Guide</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #2c1810;
-            color: #e0c9b1;
-            font-family: 'minecraftFont'
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        nav {
-            background-color: #1a0f0a;
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-        }
-        nav li {
-            margin: 0 20px;
-        }
-        nav a {
-            color: #e0c9b1;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #ffd700;
-        }
-        .main-content {
-            background-color: #3d241a;
-            padding: 2.5rem;
-            border-radius: 10px;
-            margin-top: 2rem;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            animation: fadeSlideIn 1s ease-out both;
-        }
-        @keyframes fadeSlideIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        h1 {
-            color: #ffd700;
-            text-align: center;
-            margin-bottom: 2rem;
-            font-size: 2.5rem;
-            text-shadow: 1px 1px 4px #000;
-        }
-        h2 {
-            color: #ffd700;
-            margin-top: 1.5rem;
-        }
-        .guide-section {
-            margin-bottom: 30px;
-            padding: 25px;
-            border-radius: 10px;
-            background: rgba(0,0,0,0.2);
-            animation: fadeUp 1s ease forwards;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        @keyframes fadeUp {
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .step-list, .qna-list {
-            list-style: none;
-            padding-left: 0;
-        }
-        .step-list li, .qna-list li {
-            margin-bottom: 15px;
-            padding-left: 25px;
-            position: relative;
-        }
-        .step-list li::before, .qna-list li::before {
-            content: "►";
-            position: absolute;
-            left: 0;
-            color: #ffd700;
-        }
-        .note-box {
-            background-color: #2c1810;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 5px;
-            border: 1px solid #ffd700;
-        }
-        .question {
-            color: #ffd700;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .answer {
-            padding-left: 20px;
-            border-left: 3px solid #ffd700;
-        }
-        .footer {
-            width: 100%;
-            padding: 20px 0;
-            text-align: center;
-            color: #8b4513;
-            position: relative;
-            margin-top: 40px;
-        }
-        .footer::before {
-            content: "✦";
-            display: block;
-            text-align: center;
-            color: #8b4513;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        .footer-content {
-            border-top: 2px solid #8b4513;
-            padding-top: 15px;
-            font-size: 0.9em;
-        }
-        @media (max-width: 768px) {
-            nav li {
-                margin: 0 10px;
-            }
-            nav a {
-                font-size: 1rem;
-            }
-            .main-content {
-                padding: 1.5rem;
-            }
-        }
-    </style>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About Us</a></li>
-        <li><a href="./rules.html">Rules</a></li>
-        <li><a href="./features.html">Lore</a></li>
-        <li><a href="./houses.html">Houses</a></li>
-        <li><a href="./guide.html">Guide</a></li>
-        <li><a href="./join.html">Join Us</a></li>
-    </ul>
-</nav>
-<div class="container">
-    <div class="main-content">
-        <h1>Guide to the Realm</h1>
-
-        <div class="guide-section">
-            <h2>Installing the Modpack</h2>
-            <div class="note-box">
-                Required: Modrinth App and our Official Modpack
-            </div>
-            <ul class="step-list">
-                <li>Download our Official Modpack from Discord. There are two options: <strong>Full Modpack</strong> with extra visuals and Shaders already setup, Or <strong>Bare Bones</strong> where only the needed mods for the server are included.
-                <li>Install Modrinth Launcher from their official website. <a href="https://modrinth.com/app" target="_blank" style="color: limegreen;">[Modrinth Website]</a></li>
-                <li><strong>(Inside of Modrinth App)</strong> Click on the big plus icon "Creating an instance" then click on "From File".</li>
-                <li>And Choose the Modpack file you just downloaded.</li>
-                <li>Wait for it to fully Install and press <strong>"Play"</strong></li>
-                <li>Add your username in the Whitelist Discord channel</li>
-            </ul>
-            <div class="note-box">
-                Having trouble? Join our Discord! We’ll help you out.
-            </div>
-        </div>
-
-        <div class="guide-section">
-            <h2>Living as Your House</h2>
-            <ul class="step-list">
-                <li>Pick your House carefully, you <strong>CANNOT</strong> switch later.</li>
-                <li>Find your House Territory and meet your Housemates.</li>
-                <li>Learn the Lore and the Monopolies your House owns. And follow them!</li>
-                <li>Support your House economy and claim territory.</li>
-            </ul>
-            <div class="note-box">
-                Your House is your family — help them thrive!
-            </div>
-        </div>
-
-        <div class="guide-section">
-            <h2>Common Questions</h2>
-            <ul class="qna-list">
-                <li>
-                    <div class="question">How do I find my House's territory?</div>
-                    <div class="answer">Check your Houses Discord Channel, there should be pinned Coordinates. Each House starts with NPCs and clear direction.</div>
-                </li>
-                <li>
-                    <div class="question">Can I switch Houses?</div>
-                    <div class="answer">No! Pick carefully... it's a permanent choice.</div>
-                </li>
-                <li>
-                    <div class="question">How do I trade with other Houses?</div>
-                    <div class="answer">Use the central marketplace or arrange trades on Discord. All trades <strong>must</strong> be made with Coin. You can get Coins at spawn, from NPC's or from each other.</div>
-                </li>
-                <li>
-                    <div class="question">What happens if I die?</div>
-                    <div class="answer">We have a revive mod. Work together! You can explore together and if one of you gets killed, the others can pick you up in a certain timespan.</div>
-                </li>
-                <li>
-                    <div class="question">When does the season end?</div>
-                    <div class="answer">This Season will end in 4 months or more depending on how alive the server is.</div>
-                </li>
-                <li>
-                    <div class="question">Can I level up other skills that aren't my House-specific?</div>
-                    <div class="answer">Yes, you can do the bare minimum leveling for everything. But before you can level up More you need to Max out your House-specific Skills <strong>first</strong>! Do Not just level up everything. That defeats the Points of Houses!!</div>
-                </li>
+<nav class="c-nav">
+    <div class="o-container">
+        <div class="c-nav__container">
+            <ul class="c-nav__list">
+                <li class="c-nav__item"><a href="/index.html" class="c-nav__link">Home</a></li>
+                <li class="c-nav__item"><a href="/about.html" class="c-nav__link">About</a></li>
+                <li class="c-nav__item"><a href="/rules.html" class="c-nav__link">Rules</a></li>
+                <li class="c-nav__item"><a href="/lore.html" class="c-nav__link">Lore</a></li>
+                <li class="c-nav__item"><a href="/houses.html" class="c-nav__link">Houses</a></li>
+                <li class="c-nav__item"><a href="/guide.html" class="c-nav__link">Guide</a></li>
+                <li class="c-nav__item"><a href="/join.html" class="c-nav__link c-btn c-btn--secondary">Join Us</a></li>
             </ul>
         </div>
     </div>
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-text">Created by Caelus</div>
-            <div class="footer-year">© 2025 Caelus' Server. All rights reserved.</div>
+</nav>
+
+<main id="main-content">
+    <section class="o-section">
+        <div class="o-container o-container--narrow">
+            <h1 class="u-text-center">Guide to the Realm</h1>
+
+            <div class="c-card" data-animate>
+                <div class="c-card__header">
+                    <h2 class="c-card__title">Installing the Modpack</h2>
+                </div>
+                <div class="c-card__body">
+                    <p><strong>Required:</strong> Modrinth App and our Official Modpack</p>
+                    <ol>
+                        <li>Download our Official Modpack from Discord (Full or Bare Bones)</li>
+                        <li>Install Modrinth Launcher from <a href="https://modrinth.com/app" target="_blank">modrinth.com/app</a></li>
+                        <li>Click the plus icon, then "From File"</li>
+                        <li>Choose the Modpack file you downloaded</li>
+                        <li>Wait for install and press Play</li>
+                        <li>Add your username in the Whitelist Discord channel</li>
+                    </ol>
+                    <p class="u-mt-4"><strong>Having trouble? Join our Discord!</strong></p>
+                </div>
+            </div>
+
+            <div class="c-card u-mt-8" data-animate>
+                <div class="c-card__header">
+                    <h2 class="c-card__title">Living as Your House</h2>
+                </div>
+                <div class="c-card__body">
+                    <ul>
+                        <li>Pick your House carefully - you CANNOT switch later</li>
+                        <li>Find your House Territory and meet your Housemates</li>
+                        <li>Learn the Lore and Monopolies your House owns</li>
+                        <li>Support your House economy and claim territory</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="c-card u-mt-8" data-animate>
+                <div class="c-card__header">
+                    <h2 class="c-card__title">Common Questions</h2>
+                </div>
+                <div class="c-card__body">
+                    <h3>How do I find my House's territory?</h3>
+                    <p>Check your House's Discord Channel for pinned Coordinates.</p>
+
+                    <h3 class="u-mt-4">Can I switch Houses?</h3>
+                    <p>No! Pick carefully - it's permanent.</p>
+
+                    <h3 class="u-mt-4">How do I trade with other Houses?</h3>
+                    <p>Use the central marketplace or Discord. All trades must be made with Coin.</p>
+                </div>
+            </div>
         </div>
-    </footer>
-</div>
+    </section>
+</main>
+
+<footer class="c-footer">
+    <div class="o-container">
+        <p class="c-footer__text">&copy; 2025 Helianthus Server</p>
+    </div>
+</footer>
+
+<script src="./assets/js/app.js" defer></script>
 </body>
 </html>

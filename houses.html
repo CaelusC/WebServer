@@ -3,303 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Helianthus - Houses</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #2c1810;
-            color: #e0c9b1;
-            font-family: 'minecraftFont'
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        nav {
-            background-color: #1a0f0a;
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-        }
-        nav li {
-            margin: 0 20px;
-        }
-        nav a {
-            color: #e0c9b1;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #ffd700;
-        }
-        .main-content {
-            background-color: #3d241a;
-            padding: 2.5rem;
-            border-radius: 10px;
-            margin-top: 2rem;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            animation: fadeSlideIn 1s ease-out both;
-        }
-        @keyframes fadeSlideIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        h1 {
-            color: #ffd700;
-            text-align: center;
-            margin-bottom: 2rem;
-            text-shadow: 1px 1px 4px #000;
-        }
-        .text-center {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        .house-section {
-            margin-bottom: 30px;
-            padding: 25px;
-            border-radius: 10px;
-            background: rgba(0,0,0,0.2);
-            animation: fadeUp 1s ease forwards;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        .house-section:hover {
-            transform: translateY(20px);
-        }
-        @keyframes fadeUp {
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .house-adamant {
-            border-left: 4px solid #808080;
-            background: linear-gradient(to right, #2c3247, #3d241a);
-        }
-        .house-theurgy {
-            border-left: 4px solid #663399;
-            background: linear-gradient(to right, #2b2433, #3d241a);
-        }
-        .house-demeter {
-            border-left: 4px solid #2e5931;
-            background: linear-gradient(to right, #233323, #3d241a);
-        }
-        .house-title {
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #ffd700;
-            color: #ffd700;
-        }
-        .house-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 20px;
-            align-items: start;
-        }
-        .house-image {
-            width: 100%;
-            border-radius: 10px;
-            overflow: visible;
-            position: relative;
-            z-index: 1;
-        }
-        .house-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .house-image:hover {
-            z-index: 10;
-        }
-        .house-image:hover img {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.5);
-        }
-        .house-info {
-            padding: 10px;
-        }
-        .specialties {
-            margin-top: 15px;
-            padding: 15px;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
-        }
-        .specialties ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        .specialties li {
-            margin-bottom: 10px;
-            padding-left: 20px;
-            position: relative;
-        }
-        .specialties li::before {
-            content: "\25BA";
-            position: absolute;
-            left: 0;
-            color: #ffd700;
-        }
-        .constitution-download {
-            display: inline-block;
-            margin-top: 10px;
-            color: #ffd700;
-            font-weight: bold;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        .constitution-download:hover {
-            color: #ffffff;
-            text-decoration: underline;
-        }
-        .footer {
-            width: 100%;
-            padding: 20px 0;
-            text-align: center;
-            color: #8b4513;
-            position: relative;
-            margin-top: 40px;
-        }
-        .footer::before {
-            content: "\2726";
-            display: block;
-            text-align: center;
-            color: #8b4513;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        .footer-content {
-            border-top: 2px solid #8b4513;
-            padding-top: 15px;
-            font-size: 0.9em;
-        }
-        @media (max-width: 768px) {
-            .house-content {
-                grid-template-columns: 1fr;
-            }
-            nav li {
-                margin: 0 10px;
-            }
-            nav a {
-                font-size: 1rem;
-            }
-        }
-    </style>
+    <title>Houses | Helianthus Server</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About Us</a></li>
-        <li><a href="./rules.html">Rules</a></li>
-        <li><a href="./features.html">Lore</a></li>
-        <li><a href="./houses.html">Houses</a></li>
-        <li><a href="./guide.html">Guide</a></li>
-        <li><a href="./join.html">Join Us</a></li>
-    </ul>
+<nav class="c-nav">
+    <div class="o-container">
+        <div class="c-nav__container">
+            <ul class="c-nav__list">
+                <li class="c-nav__item"><a href="/index.html" class="c-nav__link">Home</a></li>
+                <li class="c-nav__item"><a href="/about.html" class="c-nav__link">About</a></li>
+                <li class="c-nav__item"><a href="/rules.html" class="c-nav__link">Rules</a></li>
+                <li class="c-nav__item"><a href="/lore.html" class="c-nav__link">Lore</a></li>
+                <li class="c-nav__item"><a href="/houses.html" class="c-nav__link">Houses</a></li>
+                <li class="c-nav__item"><a href="/guide.html" class="c-nav__link">Guide</a></li>
+                <li class="c-nav__item"><a href="/join.html" class="c-nav__link c-btn c-btn--secondary">Join Us</a></li>
+            </ul>
+        </div>
+    </div>
 </nav>
 
-<div class="container">
-    <div class="main-content">
-        <h1>Houses of the Realm</h1>
-        <p class="text-center">Three major factions shape this new world. Learn their ways, join their cause, and read their constitutions.</p>
-        <p class="text-center"><br>You are also obligated to Follow their Monopolies: <br><strong>Hard Monopoly</strong> - Only they are allowed to do this. <br><strong>Soft Monopoly</strong> - You should rely on them for this, but you are also allowed to do it.</p>
+<main>
+    <section class="o-section">
+        <div class="o-container">
+            <h1 class="u-text-center">Houses of the Realm</h1>
+            <p class="u-text-center u-mb-8">Three major factions shape this new world.</p>
 
-        <div class="house-section house-adamant">
-            <h2 class="house-title">House of Adamant</h2>
-            <div class="house-content">
-                <div class="house-image">
-                    <img src="img/Miner house.png" alt="House of Adamant">
-                </div>
-                <div class="house-info">
-                    <p><strong>S</strong>-ystematic <br><strong>T</strong>-akeover & <br><strong>O</strong>-ptimization of <br><strong>N</strong>-atural <br><strong>E</strong>-xtractives</p>
-                    <p>These are STONE.corp's industrial colonists. Ruthless, structured, and all about profit. One Leader. Three subordinates. They came to the New World for one reason and one reason only, extract all.</p>
-                    <div class="specialties">
-                        <h2>Hard Monopolies:</h2>
+            <div class="c-card c-card--adamant" data-animate>
+                <h2 class="c-card__title">House of Adamant</h2>
+                <div class="o-grid o-grid--2-col">
+                    <div><img src="./assets/images/Miner house.png" alt="House Adamant" style="border-radius: 12px;"></div>
+                    <div>
+                        <p><strong>S</strong>ystematic <strong>T</strong>akeover & <strong>O</strong>ptimization of <strong>N</strong>atural <strong>E</strong>xtractives</p>
+                        <p>These are STONE.corp's industrial colonists. Ruthless, structured, and all about profit.</p>
+                        <h3>Hard Monopolies:</h3>
                         <ul>
-                            <li>'Create' & 'Immersive Engineering' mods [If you want these machines, you must hire Adamant to build them for you.]</li>
-                            <li>Rail systems and Redstone specific Automation</li>
+                            <li>'Create' & 'Immersive Engineering' mods</li>
+                            <li>Rail systems and Redstone automation</li>
                         </ul>
-                        <h2>Soft Monopolies:</h2>
+                        <h3>Soft Monopolies:</h3>
                         <ul>
-                            <li>Mining, digging and excavation. Cave exploration.</li>
-                            <li>Transportation of items and entities.</li>
+                            <li>Mining, digging and excavation</li>
+                            <li>Transportation of items and entities</li>
                         </ul>
+                        <a href="./assets/documents/Adamant_Constitution.pdf" target="_blank"
+                           class="c-btn u-mt-4">Read Constitution</a>
                     </div>
-                    <a class="constitution-download" href="Adamant_Constitution.pdf" target="_blank">📄 Read Constitution</a>
                 </div>
             </div>
-        </div>
 
-        <div class="house-section house-theurgy">
-            <h2 class="house-title">House of Theurgy</h2>
-            <div class="house-content">
-                <div class="house-image">
-                    <img src="img/wizard.png" alt="House of Theurgy">
-                </div>
-                <div class="house-info">
-                    <p>Witches and Warlocks of the Covenant Academy. Research-obsessed, dangerous, and not entirely sane. They serve no gods, only Curiosity and Knowledge. They came to the New World because of rumours of Ancient Magical Artifacts, they are willing to kill anything for these Artifacts.</p>
-                    <div class="specialties">
-                        <h2>Hard Monopolies:</h2>
+            <div class="c-card c-card--theurgy" data-animate>
+                <h2 class="c-card__title">House of Theurgy</h2>
+                <div class="o-grid o-grid--2-col">
+                    <div><img src="./assets/images/wizard.png" alt="House Theurgy" style="border-radius: 12px;"></div>
+                    <div>
+                        <p>Witches and Warlocks of the Covenant Academy. Research-obsessed, dangerous, and not entirely sane.</p>
+                        <h3>Hard Monopolies:</h3>
                         <ul>
-                            <li>'Ars Nouveau' & 'Apotheosis' mods. This includes and magic items (not baubles). [Other Houses can use only with an expensive permit from Theurgy]</li>
-                            <li>'Modular Golems' mod.</li>
+                            <li>'Ars Nouveau' & 'Apotheosis' mods</li>
+                            <li>'Modular Golems' mod</li>
                             <li>Hostile mob farms</li>
                         </ul>
-                        <h2>Soft Monopolies:</h2>
+                        <h3>Soft Monopolies:</h3>
                         <ul>
-                            <li>Magical resource gathering.</li>
-                            <li>Dungeon Raids, Rituals and exploring other dimensions. Exploring in general is dangerous and should be done with the help of Theurgy.</li>
+                            <li>Magical resource gathering</li>
+                            <li>Dungeon raids and exploring dimensions</li>
                         </ul>
+                        <a href="./assets/documents/Theurgy_Constitution.pdf" target="_blank"
+                           class="c-btn u-mt-4">Read Constitution</a>
                     </div>
-                    <a class="constitution-download" href="Theurgy_Constitution.pdf" target="_blank">📄 Read Constitution</a>
                 </div>
             </div>
-        </div>
 
-        <div class="house-section house-demeter">
-            <h2 class="house-title">House of Demeter</h2>
-            <div class="house-content">
-                <div class="house-image">
-                    <img src="img/farmer.png" alt="House of Demeter">
-                </div>
-                <div class="house-info">
-                    <p>Peaceful but cult-like agriculturalists. Sent by Tzar of Leria, they value harmony, seasonal rituals, and community. They have traveled to the New World to protect nature and help it thrive, in an ever expanding Empire. Some Call them a Cult, but they prefer 'Peaceful Community for like-minded People'</p>
-                    <div class="specialties">
-                        <h2>Hard Monopolies:</h2>
+            <div class="c-card c-card--demeter" data-animate>
+                <h2 class="c-card__title">House of Demeter</h2>
+                <div class="o-grid o-grid--2-col">
+                    <div><img src="./assets/images/farmer.png" alt="House Demeter" style="border-radius: 12px;"></div>
+                    <div>
+                        <p>Peaceful but cult-like agriculturalists. Sent by Tzar of Leria, they value harmony and community.</p>
+                        <h3>Hard Monopolies:</h3>
                         <ul>
-                            <li>'Villager Recruits & Workers' mods.</li>
-                            <li>'Farmer's Delight' & 'All Legacy Food' mods.</li>
-                            <li>Farming and Herbalism (Excluding Ars Nouveau Magic Crops)</li>
+                            <li>'Villager Recruits & Workers' mods</li>
+                            <li>'Farmer's Delight' & food mods</li>
+                            <li>Farming and Herbalism</li>
                         </ul>
-                        <h2>Soft Monopolies:</h2>
+                        <h3>Soft Monopolies:</h3>
                         <ul>
                             <li>Breeding and livestock</li>
                             <li>Potion & Wine making</li>
                         </ul>
+                        <a href="./assets/documents/Demeter_Constitution.pdf" target="_blank"
+                           class="c-btn u-mt-4">Read Constitution</a>
                     </div>
-                    <a class="constitution-download" href="Demeter_Constitution.pdf" target="_blank">📄 Read Constitution</a>
                 </div>
             </div>
         </div>
+    </section>
+</main>
 
+<footer class="c-footer">
+    <div class="o-container">
+        <p class="c-footer__text">Created by Caelus</p>
+        <p class="c-footer__text"><small>&copy; 2025 Helianthus Server</small></p>
     </div>
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-text">Created by Caelus</div>
-            <div class="footer-year">© 2025 Caelus' Server. All rights reserved.</div>
-        </div>
-    </footer>
-</div>
+</footer>
+
+<script src="./assets/js/app.js" defer></script>
 </body>
 </html>

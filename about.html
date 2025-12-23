@@ -2,196 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Helianthus - About Us</title>
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #2c1810;
-      color: #e0c9b1;
-      font-family: 'minecraftFont'
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    nav {
-      background-color: #1a0f0a;
-      padding: 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      margin: 0;
-      padding: 0;
-    }
-    nav li {
-      margin: 0 20px;
-    }
-    nav a {
-      color: #e0c9b1;
-      text-decoration: none;
-      font-size: 1.2rem;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #ffd700;
-    }
-    .main-content {
-      background-color: #3d241a;
-      padding: 2.5rem;
-      border-radius: 10px;
-      margin-top: 2rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      animation: fadeSlideIn 1s ease-out both;
-    }
-    @keyframes fadeSlideIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    h1, h2 {
-      color: #ffd700;
-      text-align: center;
-      margin-bottom: 2rem;
-      text-shadow: 1px 1px 4px #000;
-    }
-    p {
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 2rem 0;
-      background-color: rgba(0,0,0,0.2);
-      border-radius: 10px;
-      overflow: hidden;
-      animation: fadeUp 1s ease forwards;
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    th, td {
-      padding: 15px;
-      text-align: left;
-      border: 1px solid #4a2f20;
-    }
-    th {
-      background-color: #1a0f0a;
-      color: #ffd700;
-    }
-    td {
-      background-color: #2c1810;
-    }
-    .footer {
-      width: 100%;
-      padding: 20px 0;
-      text-align: center;
-      font-family: 'minecraftFont'
-      color: #8b4513;
-      position: relative;
-      margin-top: 40px;
-    }
-    .footer::before {
-      content: "✦";
-      display: block;
-      text-align: center;
-      color: #8b4513;
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-    .footer-content {
-      border-top: 2px solid #8b4513;
-      padding-top: 15px;
-      font-size: 0.9em;
-    }
-    .footer-text {
-      margin: 5px 0;
-    }
-    .footer-year {
-      font-size: 0.8em;
-      opacity: 0.8;
-    }
-    @media (max-width: 768px) {
-      nav li {
-        margin: 0 10px;
-      }
-      nav a {
-        font-size: 1rem;
-      }
-    }
-  </style>
+  <title>About Us | Helianthus Server</title>
+  <meta name="description" content="Meet the team behind Helianthus server. Learn about our community and vision.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
-<nav>
-  <ul>
-    <li><a href="./index.html">Home</a></li>
-    <li><a href="./about.html">About Us</a></li>
-    <li><a href="./rules.html">Rules</a></li>
-    <li><a href="./features.html">Lore</a></li>
-    <li><a href="./houses.html">Houses</a></li>
-    <li><a href="./guide.html">Guide</a></li>
-    <li><a href="./join.html">Join Us</a></li>
-  </ul>
-</nav>
-<div class="container">
-  <section class="main-content">
-    <h2>About Our Community</h2>
-    <p>We're a small but dedicated group of Minecraft players who wanted something more... more lore, more immersion, more structure. We work on this server between our studies and jobs, so things might go slow sometimes, but every detail has love behind it.</p>
-    <p>We believe in fair play, hard survival, roleplay, and creating something actually unique. Whether you're a builder, hardcore min-maxer, or someone who just likes to be part of a community, we probably have a House for you!</p>
-
-    <table>
-      <thead>
-      <tr>
-        <th>Staff Member</th>
-        <th>Role</th>
-        <th>Discord</th>
-        <th>Time Zone</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td>Caelus</td>
-        <td>Owner</td>
-        <td>caelus5309</td>
-        <td>EU-W</td>
-      </tr>
-      <tr>
-        <td>Puppet</td>
-        <td>Backend Admin</td>
-        <td>pupetone</td>
-        <td>EU-W</td>
-      </tr>
-      <tr>
-        <td>CursedFlame</td>
-        <td>Admin</td>
-        <td>cursedflame</td>
-        <td>EU-NE</td>
-      </tr>
-      </tbody>
-    </table>
-
-    <p>If you have any questions or complaints, contact us on Discord. We’re usually friendly.</p>
-  </section>
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-text">Created by Caelus</div>
-      <div class="footer-year">© 2025 Caelus' Server. All rights reserved.</div>
+<nav class="c-nav" role="navigation">
+  <div class="o-container">
+    <div class="c-nav__container">
+      <ul class="c-nav__list">
+        <li class="c-nav__item"><a href="/index.html" class="c-nav__link">Home</a></li>
+        <li class="c-nav__item"><a href="/about.html" class="c-nav__link">About</a></li>
+        <li class="c-nav__item"><a href="/rules.html" class="c-nav__link">Rules</a></li>
+        <li class="c-nav__item"><a href="/lore.html" class="c-nav__link">Lore</a></li>
+        <li class="c-nav__item"><a href="/houses.html" class="c-nav__link">Houses</a></li>
+        <li class="c-nav__item"><a href="/guide.html" class="c-nav__link">Guide</a></li>
+        <li class="c-nav__item"><a href="/join.html" class="c-nav__link c-btn c-btn--secondary">Join Us</a></li>
+      </ul>
     </div>
-  </footer>
-</div>
+  </div>
+</nav>
+
+<main id="main-content" role="main">
+  <section class="o-section">
+    <div class="o-container o-container--narrow">
+      <h1 class="u-text-center">About Our Community</h1>
+
+      <div class="c-card" data-animate>
+        <div class="c-card__body">
+          <p>We're a small but dedicated group of Minecraft players who wanted something more... more lore, more immersion, more structure. We work on this server between our studies and jobs, so things might go slow sometimes, but every detail has love behind it.</p>
+
+          <p>We believe in fair play, hard survival, roleplay, and creating something actually unique. Whether you're a builder, hardcore min-maxer, or someone who just likes to be part of a community, we probably have a House for you!</p>
+        </div>
+      </div>
+
+      <h2 class="u-text-center u-mt-12">Our Team</h2>
+
+      <table class="c-table">
+        <thead class="c-table__head">
+        <tr class="c-table__row">
+          <th class="c-table__header">Staff Member</th>
+          <th class="c-table__header">Role</th>
+          <th class="c-table__header">Discord</th>
+          <th class="c-table__header">Time Zone</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="c-table__row">
+          <td class="c-table__cell">Caelus</td>
+          <td class="c-table__cell">Owner</td>
+          <td class="c-table__cell">caelus5309</td>
+          <td class="c-table__cell">EU-W</td>
+        </tr>
+        <tr class="c-table__row">
+          <td class="c-table__cell">Puppet</td>
+          <td class="c-table__cell">Backend Admin</td>
+          <td class="c-table__cell">pupetone</td>
+          <td class="c-table__cell">EU-W</td>
+        </tr>
+        <tr class="c-table__row">
+          <td class="c-table__cell">CursedFlame</td>
+          <td class="c-table__cell">Admin</td>
+          <td class="c-table__cell">cursedflame</td>
+          <td class="c-table__cell">EU-NE</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <div class="c-card u-mt-8" data-animate>
+        <div class="c-card__body u-text-center">
+          <p>If you have any questions or complaints, contact us on Discord. We're usually friendly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="c-footer" role="contentinfo">
+  <div class="o-container">
+    <div class="c-footer__content">
+      <p class="c-footer__text">Created by Caelus</p>
+      <p class="c-footer__text"><small>&copy; 2025 Helianthus Server. All rights reserved.</small></p>
+    </div>
+  </div>
+</footer>
+
+<script src="./assets/js/app.js" defer></script>
 </body>
 </html>

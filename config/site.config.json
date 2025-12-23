@@ -1,0 +1,77 @@
+{
+  "site": {
+    "name": "Helianthus Server",
+    "title": "Helianthus - Lore-Driven Minecraft Survival",
+    "description": "Join Helianthus, a unique Minecraft server ruled by a merciless Sun God. Choose your House, master their specialties, and survive in a harsh, lore-rich world.",
+    "url": "https://helianthus-server.com",
+    "author": "Caelus",
+    "email": "contact@helianthus-server.com",
+    "language": "en",
+    "timezone": "Europe/Amsterdam"
+  },
+  "social": {
+    "discord": "https://discord.gg/bnAgEJrYJK",
+    "twitter": "",
+    "youtube": "",
+    "twitch": ""
+  },
+  "theme": {
+    "primaryColor": "#ffd700",
+    "backgroundColor": "#2c1810",
+    "textColor": "#e0c9b1",
+    "accentColor": "#ffd700"
+  },
+  "houses": [
+    {
+      "id": "adamant",
+      "name": "House of Adamant",
+      "color": "#808080",
+      "description": "Industrial colonists focused on mining and machinery"
+    },
+    {
+      "id": "theurgy",
+      "name": "House of Theurgy",
+      "color": "#663399",
+      "description": "Magical researchers obsessed with arcane knowledge"
+    },
+    {
+      "id": "demeter",
+      "name": "House of Demeter",
+      "color": "#2e5931",
+      "description": "Agricultural community focused on farming and nature"
+    }
+  ],
+  "features": {
+    "enableAnalytics": false,
+    "enableCookieConsent": false,
+    "enableNewsletter": false,
+    "enableComments": false
+  },
+  "api": {
+    "endpoint": "https://api.helianthus-server.com",
+    "version": "v1"
+  },
+  "assets": {
+    "imagesPath": "/assets/images",
+    "cssPath": "/assets/css",
+    "jsPath": "/assets/js",
+    "fontsPath": "/assets/fonts",
+    "documentsPath": "/assets/documents"
+  },
+  "seo": {
+    "keywords": [
+      "minecraft",
+      "server",
+      "survival",
+      "roleplay",
+      "multiplayer",
+      "houses",
+      "lore",
+      "modded",
+      "PvE",
+      "community"
+    ],
+    "ogImage": "/assets/icons/og-image.jpg",
+    "twitterCard": "summary_large_image"
+  }
+}

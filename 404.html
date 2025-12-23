@@ -1,62 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <title>Page Not Found</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    * {
-      line-height: 1.2;
-      margin: 0;
-    }
-
-    html {
-      color: #888;
-      display: table;
-      font-family: sans-serif;
-      height: 100%;
-      text-align: center;
-      width: 100%;
-    }
-
-    body {
-      display: table-cell;
-      vertical-align: middle;
-      margin: 2em auto;
-    }
-
-    h1 {
-      color: #555;
-      font-size: 2em;
-      font-weight: 400;
-    }
-
-    p {
-      margin: 0 auto;
-      width: 280px;
-    }
-
-    @media only screen and (max-width: 280px) {
-
-      body,
-      p {
-        width: 95%;
-      }
-
-      h1 {
-        font-size: 1.5em;
-        margin: 0 0 0.3em;
-      }
-
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="./assets/css/main.css">
 </head>
-
 <body>
-  <h1>Page Not Found</h1>
-  <p>Sorry, the page is down right now</p>
-</body>
+<nav class="c-nav">
+  <div class="o-container">
+    <div class="c-nav__container">
+      <ul class="c-nav__list">
+        <li class="c-nav__item"><a href="/index.html" class="c-nav__link">Home</a></li>
+        <li class="c-nav__item"><a href="/about.html" class="c-nav__link">About</a></li>
+        <li class="c-nav__item"><a href="/rules.html" class="c-nav__link">Rules</a></li>
+        <li class="c-nav__item"><a href="/lore.html" class="c-nav__link">Lore</a></li>
+        <li class="c-nav__item"><a href="/houses.html" class="c-nav__link">Houses</a></li>
+        <li class="c-nav__item"><a href="/guide.html" class="c-nav__link">Guide</a></li>
+        <li class="c-nav__item"><a href="/join.html" class="c-nav__link c-btn c-btn--secondary">Join Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
+<main id="main-content">
+  <section class="o-section">
+    <div class="o-container o-container--narrow">
+      <div class="c-card u-text-center" data-animate>
+        <div class="c-card__header">
+          <h1 class="c-card__title">404 - Page Not Found</h1>
+        </div>
+        <div class="c-card__body">
+          <p class="u-mb-8">Sorry, the page you're looking for doesn't exist.</p>
+          <a href="/index.html" class="c-btn c-btn--large">Return Home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="c-footer">
+  <div class="o-container">
+    <p class="c-footer__text">&copy; 2025 Helianthus Server</p>
+  </div>
+</footer>
+
+<script src="./assets/js/app.js" defer></script>
+</body>
 </html>
-<!-- IE needs 512+ bytes: https://docs.microsoft.com/archive/blogs/ieinternals/friendly-http-error-pages -->
