@@ -82,7 +82,7 @@
 
 @font-face {
     font-family: 'Pixel Digivolve';
-    src: url('/assets/fonts/Pixel Digivolve.otf') format('opentype');
+    src: url('./assets/fonts/Pixel Digivolve.otf') format('opentype');
     font-display: swap;
     font-weight: normal;
     font-style: normal;
