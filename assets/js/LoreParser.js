@@ -327,7 +327,7 @@ class LoreRenderer {
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
     // Default configuration - change MARKDOWN_FILE to your file path
-    const MARKDOWN_FILE = '/assets/documents/lore.md';
+    const MARKDOWN_FILE = '../documents/lore.md';
 
     const lore = new LoreRenderer(MARKDOWN_FILE);
     lore.init();
